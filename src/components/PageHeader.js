@@ -34,7 +34,7 @@ const PageHeader = React.createClass({
                     <Navbar.Collapse>
 
                         <Nav pullRight>
-                            <Nav.Item href="https://github.com/rsuite/rsuite/tree/master/examples/webpack-rudux-router" >Github</Nav.Item>
+                            <Nav.Item href="https://github.com/rsuite/rsuite-example-admin" >Github</Nav.Item>
                         </Nav>
                     </Navbar.Collapse>
                 </div>
