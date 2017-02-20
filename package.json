@@ -6,6 +6,7 @@
     "kill": "kill -9 `ps -ef|grep webpack|awk '{print $2}'`",
     "dev": "NODE_ENV=development webpack-dev-server --hot --inline --progress --colors --port 3000 --config webpack.dev.config.js",
     "build": "rm -rf build && NODE_ENV=production webpack --progress --colors",
+    "publish":"npm run build && cp -rf ./build/* ../rsuite.github.io/examples/webpack-rudux-router",
     "test": "karma start"
   },
   "author": "Simon Guo <simonguo.2009@gmail.com>",
