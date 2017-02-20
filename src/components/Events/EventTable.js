@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Column, Cell, HeaderCell} from 'rsuite-table';
+import { Table, Column, Cell, HeaderCell } from 'rsuite-table';
 import { FormattedMessage } from 'react-intl';
 
 import TableResizeMixin from '../../mixins/TableResizeMixin';
@@ -7,6 +7,7 @@ import PageTitleBar from '../../components/PageTitleBar';
 
 import { StatesCell, ObjectCell } from '../CustomTableCells';
 import { CommitsCell } from './CustomTableCells';
+import getTableLocale from '../getTableLocale';
 
 
 const EventTable = React.createClass({
@@ -41,10 +42,7 @@ const EventTable = React.createClass({
     render: function () {
 
         const { data = [], status } = this.props;
-        const tableLocale = {
-            emptyMessage: <FormattedMessage id={ (status === 'success' && data.length === 0) ? 'noDataFound' : 'loading'} />
-        };
-
+        const tableLocale = getTableLocale(status, data);
 
         return (
             <div className="page-content">
@@ -56,26 +54,26 @@ const EventTable = React.createClass({
                     headerHeight={40}
                     rowHeight={40}
                     locale={tableLocale}
-                    >
-                    <Column width={120}  fixed resizable>
+                >
+                    <Column width={120} fixed resizable>
                         <HeaderCell>ID</HeaderCell>
                         <Cell dataKey="id" />
                     </Column>
-                    <Column width={260}  fixed resizable>
+                    <Column width={260} fixed resizable>
                         <HeaderCell>Created at</HeaderCell>
                         <ObjectCell dataKey="created_at" />
                     </Column>
-                    <Column width={200}  fixed resizable>
+                    <Column width={200} fixed resizable>
                         <HeaderCell>Type</HeaderCell>
                         <Cell dataKey="type" />
                     </Column>
 
-                    <Column width={200}  resizable>
+                    <Column width={200} resizable>
                         <HeaderCell>Actor</HeaderCell>
                         <ObjectCell dataKey="actor.login" />
                     </Column>
 
-                    <Column width={300}  resizable>
+                    <Column width={300} resizable>
                         <HeaderCell>Repo</HeaderCell>
                         <ObjectCell dataKey="repo.name" />
                     </Column>

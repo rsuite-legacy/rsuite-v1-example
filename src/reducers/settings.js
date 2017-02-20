@@ -11,7 +11,7 @@ const initialState = {
                     'link': '/events'
                 },
                 {
-                    'localeKey': 'Repos',
+                    'localeKey': 'Repositories',
                     'link': '/repos'
                 }
             ]

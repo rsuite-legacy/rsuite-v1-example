@@ -3,5 +3,5 @@ export default {
     Events: 'Events',
     Repos: 'Repos',
     noDataFound: 'No Data Found',
-    loading: 'loading'
+    loading: 'loading...'
 };

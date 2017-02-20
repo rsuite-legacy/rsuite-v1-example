@@ -6,6 +6,8 @@ import TableResizeMixin from '../../mixins/TableResizeMixin';
 import PageTitleBar from '../../components/PageTitleBar';
 import { ObjectCell, LinkCell } from '../CustomTableCells';
 
+import getTableLocale from '../getTableLocale';
+
 
 
 const RepoTable = React.createClass({
@@ -40,13 +42,11 @@ const RepoTable = React.createClass({
     render: function () {
 
         const { data = [], status } = this.props;
-        const tableLocale = {
-            emptyMessage: <FormattedMessage id={ (status === 'success' && data.length === 0) ? 'noDataFound' : 'loading'} />
-        };
+        const tableLocale = getTableLocale(status, data);
 
         return (
             <div className="page-content">
-                <PageTitleBar title="Events"></PageTitleBar>
+                <PageTitleBar title="Repositories"></PageTitleBar>
                 <Table
                     height={this.state.tableHeight}
                     data={data}
