@@ -1,8 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlwebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const plugins = require('./webpack/plugins');
+const loaders = require('./webpack/loaders');
 
 module.exports = {
     entry: [
@@ -10,42 +9,21 @@ module.exports = {
         path.join(__dirname, 'src/index')
     ],
     output: {
-        publicPath: 'http://127.0.0.1:3000/',
+        publicPath: '/',
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js',
     },
-    plugins: [
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        }),
-        new ExtractTextPlugin('[name].css'),
-        new webpack.HotModuleReplacementPlugin(),
-        new HtmlwebpackPlugin({
-            title: 'RSuite example',
-            filename: 'index.html',
-            template: 'src/index.html',
-            inject: true,
-            hash: true
-        }),
-    ],
+    plugins: plugins,
     module: {
-        loaders: [
-
-            {
-                test: /\.js$/,
-                loaders: [
-                    'react-hot',
-                    'babel?babelrc'
-                ],
-                exclude: /node_modules/
-            }, {
-                test: /\.less$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
-            },
-            {
-                test: /\.(jpg|png)$/,
-                loader: 'url?limit=8192'
-            }
+        loaders: [{
+            test: /\.js$/,
+            loaders: [
+                'react-hot',
+                'babel?babelrc'
+            ],
+            exclude: /node_modules/
+        },
+        ...loaders
         ]
     }
 };

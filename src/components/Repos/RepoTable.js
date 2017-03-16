@@ -54,13 +54,14 @@ const RepoTable = React.createClass({
                     rowHeight={40}
                     locale={tableLocale}
                     >
-                    <Column width={120}  fixed resizable>
-                        <HeaderCell>ID</HeaderCell>
-                        <Cell dataKey="id" />
-                    </Column>
+
                     <Column width={200}  fixed resizable>
                         <HeaderCell>Name</HeaderCell>
                         <Cell dataKey="name" />
+                    </Column>
+                    <Column width={120}  resizable>
+                        <HeaderCell>ID</HeaderCell>
+                        <Cell dataKey="id" />
                     </Column>
 
                     <Column width={260} resizable>
