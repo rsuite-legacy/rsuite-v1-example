@@ -6,6 +6,7 @@
     "kill": "kill -9 `ps -ef|grep webpack|awk '{print $2}'`",
     "dev": "NODE_ENV=development NODE_TYPE=integration webpack-dev-server --progress --colors --port 3000 --host 0.0.0.0 --config webpack.dev.config.js --devtool source-map ",
     "build": "rm -rf build && NODE_ENV=production webpack --progress --colors",
+    "publish-docs": "node ./gh-pages.js",
     "test": "karma start"
   },
   "author": "Simon Guo <simonguo.2009@gmail.com>",
@@ -54,6 +55,7 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0"
+    "webpack-dev-server": "^2.3.0",
+    "gh-pages": "^0.12.0"
   }
 }
