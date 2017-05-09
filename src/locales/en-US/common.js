@@ -1,7 +1,7 @@
 export default {
-    Github: 'Github',
-    Events: 'Events',
-    Repos: 'Repos',
-    noDataFound: 'No Data Found',
-    loading: 'loading...'
+  Github: 'Github',
+  Events: 'Events',
+  Repositories: 'Repositories',
+  noDataFound: 'No Data Found',
+  loading: 'loading...'
 };

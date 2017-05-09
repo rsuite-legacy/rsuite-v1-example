@@ -6,9 +6,9 @@ import App from '../components/App';
 
 
 function mapState2Props(state) {
-    return {
-        ...state.store.settings
-    };
+  return {
+    ...state.store.settings
+  };
 }
 
 

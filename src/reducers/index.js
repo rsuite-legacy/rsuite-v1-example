@@ -4,9 +4,9 @@ import settings from './settings';
 import repos from './repos';
 
 const app = combineReducers({
-    events,
-    repos,
-    settings
+  events,
+  repos,
+  settings
 });
 
 export default app;

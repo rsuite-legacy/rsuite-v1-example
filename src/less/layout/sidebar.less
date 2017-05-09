@@ -30,15 +30,15 @@
         margin-right: 5px;
         display: inline;
         font-size: 16px;
-        font-family: FontAwesome;
-        content: "\f104";
+        font-family: RSuiteIconFont;
+        content: @content-arrow-left;
         font-weight: 300;
         text-shadow: none;
         float: right;
         margin-top: 1px;
     }
     .open .arrow:before{
-        content: "\f107";
+        content: @content-arrow-down;
     }
 }
 
@@ -121,7 +121,7 @@ Page sidebar
         font-size: 16px;
     }
     i:before {
-        content: "\f104";
+        content: @content-arrow-left;
     }
 }
 .sidebar-hide {
@@ -140,7 +140,7 @@ Page sidebar
         box-shadow: none !important;
         background: @B200;
         i:before {
-            content: "\f105";
+            content: @content-arrow-right;
         }
     }
     .page-content-wrapper {

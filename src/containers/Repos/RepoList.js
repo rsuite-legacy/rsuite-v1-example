@@ -7,17 +7,17 @@ import { RepoTable } from '../../components/Repos';
 
 
 function mapState2Props(state) {
-    return {
-        data: state.store.repos.data,
-        status: state.store.repos.status
-    };
+  return {
+    data: state.store.repos.data,
+    status: state.store.repos.status
+  };
 }
 
 function mapDispatch2Props(dispatch) {
-    const actions = bindActionCreators(actionCreators, dispatch);
-    return {
-        onFetchRepos: actions.fetchRepos
-    };
+  const actions = bindActionCreators(actionCreators, dispatch);
+  return {
+    onFetchRepos: actions.fetchRepos
+  };
 }
 
 export default connect(mapState2Props, mapDispatch2Props)(RepoTable);

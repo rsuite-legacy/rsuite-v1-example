@@ -1,29 +1,35 @@
-const path = require('path');
+const { resolve } = require('path');
 const webpack = require('webpack');
-const plugins = require('./webpack/plugins');
-const loaders = require('./webpack/loaders');
+const commonPlugins = require('./webpack/plugins');
+const commonRules = require('./webpack/rules');
 
-module.exports = {
-    entry: [
-        'webpack/hot/dev-server',
-        path.join(__dirname, 'src/index')
-    ],
-    output: {
-        publicPath: '/',
-        path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js',
-    },
-    plugins: plugins,
-    module: {
-        loaders: [{
-            test: /\.js$/,
-            loaders: [
-                'react-hot',
-                'babel?babelrc'
-            ],
-            exclude: /node_modules/
-        },
-        ...loaders
-        ]
-    }
+const config = {
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://127.0.0.1:3000',
+    'webpack/hot/only-dev-server',
+    resolve(__dirname, 'src/index')
+  ],
+  output: {
+    path: resolve(__dirname, 'build'),
+    filename: 'bundle.js',
+    publicPath: '/'
+  },
+  devServer: {
+    hot: true,
+    contentBase: resolve(__dirname, ''),
+    publicPath: '/'
+  },
+  plugins: [
+    ...commonPlugins,
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+  ],
+  module: {
+    rules: [
+      ...commonRules
+    ]
+  }
 };
+
+module.exports = config;
