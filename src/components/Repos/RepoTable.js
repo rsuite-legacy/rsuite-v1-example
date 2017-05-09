@@ -41,7 +41,7 @@ const RepoTable = React.createClass({
   },
   render: function () {
 
-    const { data = [], status } = this.props;
+    const { data, status } = this.props;
     const tableLocale = getTableLocale(status, data);
 
     return (

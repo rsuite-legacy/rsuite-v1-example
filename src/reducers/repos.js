@@ -10,7 +10,7 @@ export default function repos(state = initialState, action) {
     case FETCH_REPOS:
       return Object.assign({}, state, {
         status: action.status,
-        data: action.items
+        data: action.items || []
       });
     default:
       return state;
