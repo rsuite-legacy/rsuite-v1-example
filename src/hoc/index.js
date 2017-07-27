@@ -1,4 +1,6 @@
-import TableResizeHoc from './TableResizeHoc'
+import TableResizeHoc from './TableResizeHoc';
+import TableViewHoc from './TableViewHoc';
 export {
-  TableResizeHoc
+  TableResizeHoc,
+  TableViewHoc
 };
