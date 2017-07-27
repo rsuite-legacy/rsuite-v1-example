@@ -26,6 +26,13 @@ function formatInfo(total, activePage) {
   );
 }
 
+const propTypes = {
+  displayLength: PropTypes.number,
+  total: PropTypes.number,
+  page: PropTypes.number,
+  onChangePage: PropTypes.func,
+  onChangeLength: PropTypes.func
+};
 
 const contextTypes = {
   user: React.PropTypes.object,
@@ -38,10 +45,10 @@ class CustomTablePagination extends Component {
     this.state = {};
   }
 
-  handleChangeLength(dataKey) {
+  handleChangeLength = (dataKey) => {
     const { onChangeLength } = this.props;
     onChangeLength && onChangeLength(dataKey);
-    setItemByUid('table.length', dataKey, this.context.user.get('id'));
+    setItemByUid('table.length', dataKey);
   }
 
   render() {
@@ -57,6 +64,8 @@ class CustomTablePagination extends Component {
     );
   }
 }
+
+CustomTablePagination.propTypes = propTypes;
 CustomTablePagination.contextTypes = contextTypes;
 
 export default CustomTablePagination;

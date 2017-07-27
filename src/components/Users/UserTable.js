@@ -22,8 +22,7 @@ const defaultProps = {
   tableDefaultHeight: 400,
   frameHeight: 140
 };
-// TODO:
-// mixins: [TableResizeMixin],
+
 class UserTable extends Component {
   constructor(props) {
     super(props);
@@ -151,10 +150,11 @@ class UserTable extends Component {
     return cols;
   }
 
-  loadTableData() {
+  loadTableData = (params) => {
     const { onFetchUsers } = this.props;
-    onFetchUsers && onFetchUsers();
+    onFetchUsers && onFetchUsers(params || this.state.params);
   }
+
   render() {
     const { data, status } = this.props;
 

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import { on, getHeight } from 'dom-lib';
+import debounce from '../utils/debounce';
 import { getItem, setItem } from '../utils/storage';
 
 import {
@@ -18,15 +20,16 @@ import {
 import { FormattedMessage } from 'react-intl';
 import ButtonGroupStatusRadio from './ButtonGroupStatusRadio';
 import { Link } from 'react-router';
-import TablePagination from './CustomTablePagination';
+import CustomTablePagination from './CustomTablePagination';
 import { OrderCell } from './CustomTableCells';
 import SearchInput from './SearchInput';
 import { TableViewHoc } from '../hoc';
 
 import { getLocale } from './TableLocale';
 import { getItemByUid } from '../utils/storage';
-import debounce from '../utils/debounce';
 import chain from '../utils/createChainedFunction';
+
+const FRAME_HEIGHT = 136;  //上下 50 + 上下 18 padding
 
 const propTypes = {
   data: PropTypes.array,
@@ -44,7 +47,6 @@ const propTypes = {
 const defaultProps = {
   headerHeight: 40,
   rowHeight: 40,
-  tableHeight: 774,
   data: [],
   options: {},
   cacheKey: 'table'
@@ -66,7 +68,8 @@ class TableView extends Component {
         page: 1,
         pagesize: parseInt(getItemByUid('table.length')) || 30,
         status: _.get(options, 'statusFilter.defaultStatus'),
-      }
+      },
+      tableHeight: 0
     };
   }
 
@@ -74,6 +77,83 @@ class TableView extends Component {
     const { data, isDataReady } = this.props;
     return !_.eq(nextProps, this.props);
 
+  }
+  componentWillMount() {
+    this.setState({
+      tableHeight: this.calculateTableHeight()
+    });
+  }
+  componentDidMount() {
+    this._onWindowResizeListener = on(window, 'resize', debounce(this.handleWindowResize, 50));
+  }
+
+  componentWillUnmount() {
+    if (this._onWindowResizeListener) {
+      this._onWindowResizeListener.off();
+    }
+  }
+
+  calculateTableHeight() {
+    const { tableDefaultHeight } = this.props;
+    const height = getHeight(global) - FRAME_HEIGHT;
+    return height < tableDefaultHeight ? tableDefaultHeight : height;
+  }
+
+  handleWindowResize() {
+    this.setState({
+      tableHeight: this.calculateTableHeight()
+    });
+  }
+
+  //点击分页
+  handleChangePage = (dataKey) => {
+    const params = Object.assign({}, this.state.params, {
+      page: dataKey
+    });
+    this.loadTableData(params);
+    this.setState({ params });
+  }
+  //切换每页显示数目
+  handleChangeLength = (dataKey) => {
+    const params = Object.assign({}, this.state.params, {
+      page: 1,
+      pagesize: dataKey
+    });
+    this.loadTableData(params);
+    this.setState({ params });
+  }
+  //关键字搜索
+  handleSearch = (word) => {
+    const params = Object.assign({}, this.state.params, {
+      page: 1,
+      word: word.trim()
+    });
+    this.setState({ params });
+    this.loadTableData(params);
+  }
+  //搜索关键字的 过滤字段
+  handleChangeFilterColumn = (filterColumn) => {
+
+    const params = Object.assign({}, this.state.params, {
+      page: 1,
+      filterColumn: filterColumn
+    });
+
+    if (this.state.params.word) {
+      this.loadTableData(params);
+    }
+
+    this.setState({ params });
+  }
+
+  //改变数据状态 (全部，启用，禁用)
+  handleChangeStatus = (status) => {
+    const params = Object.assign({}, this.state.params, {
+      page: 1,
+      status: status
+    });
+    this.loadTableData(params);
+    this.setState({ params });
   }
   _getDefaultKey(keys) {
     if (!keys) {
@@ -97,7 +177,7 @@ class TableView extends Component {
     }, cb);
   }
 
-  loadTableData(params) {
+  loadTableData = (params) => {
     const clearParams = _(params).omitBy(_.isUndefined).value();
     this.props.onLoadData(clearParams);
     setItem(`${this.state.cacheKey}.params`, JSON.stringify(clearParams));
@@ -148,7 +228,7 @@ class TableView extends Component {
         <Dropdown
           activeKey={params.filterColumn}
           onSelect={chain(
-            this.props.handleChangeFilterColumn,
+            this.handleChangeFilterColumn,
             searchControl.onSelect
           )}
           select
@@ -167,7 +247,7 @@ class TableView extends Component {
         <SearchInput
           word={params.word}
           onChange={debounce(chain(
-            this.props.handleSearch,
+            this.handleSearch,
             searchControl.onSearch
           ), 200)}
         />
@@ -192,7 +272,7 @@ class TableView extends Component {
         <ButtonGroupStatusRadio
           status={_.get(this.state, 'params.status')}
           onClick={chain(
-            this.props.handleChangeStatus,
+            this.handleChangeStatus,
             statusFilter.onClick
           )}
         />
@@ -252,7 +332,7 @@ class TableView extends Component {
     const { options } = this.props;
     const { params } = this.state;
     return (
-      <TablePagination
+      <CustomTablePagination
         displayLength={params.pagesize}
         total={options.total}
         page={params.page}
@@ -261,7 +341,7 @@ class TableView extends Component {
           options.onChangePageNumber
         )}
         onChangeLength={chain(
-          this.props.handleChangeLength,
+          this.handleChangeLength,
           options.onChangePagesize
         )}
       />
@@ -304,7 +384,6 @@ class TableView extends Component {
   render() {
     const {
       data,
-      tableHeight = 774,
       headerHeight,
       rowHeight,
       isDataReady,
@@ -315,7 +394,7 @@ class TableView extends Component {
       ...props
     } = this.props;
 
-    const { params } = this.state;
+    const { params, tableHeight } = this.state;
     const footerHeight = 56;
 
 
@@ -341,7 +420,7 @@ class TableView extends Component {
           locale={getLocale(status, data)}
           sortColumn={params.orderColumn}
           sortType={params.orderType}
-          onSortColumn={this.props.handleSortColumn}
+          onSortColumn={this.handleSortColumn}
         >
           {this.renderColumns()}
         </Table>

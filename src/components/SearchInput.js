@@ -9,7 +9,7 @@ class SearchInput extends Component {
       word: this.props.word
     };
   }
-  handleSearch(word) {
+  handleSearch = (word) =>{
     this.setState({
       word
     });
