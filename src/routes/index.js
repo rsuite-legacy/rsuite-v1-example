@@ -9,8 +9,7 @@ module.exports = {
     indexRoute: { onEnter: (nextState, replace) => replace('/events') },
     childRoutes: [
       require('./events'),
-      require('./repos'),
-      require('./users')
+      require('./repos')
     ]
   }]
 };

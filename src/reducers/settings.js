@@ -13,10 +13,6 @@ const initialState = {
         {
           'localeKey': 'Repositories',
           'link': '/repos'
-        },
-        {
-          'localeKey': 'Users',
-          'link': '/users'
         }
       ]
     }

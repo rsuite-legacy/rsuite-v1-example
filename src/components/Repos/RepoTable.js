@@ -1,51 +1,45 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { Table, Column, Cell, HeaderCell } from 'rsuite-table';
 import { FormattedMessage } from 'react-intl';
 
-import { TableResizeHoc } from '../../hoc';
+import TableResizeMixin from '../../mixins/TableResizeMixin';
 import PageTitleBar from '../../components/PageTitleBar';
 import { ObjectCell, LinkCell } from '../CustomTableCells';
 
 import getTableLocale from '../getTableLocale';
 
-const propTypes = {
-  data: React.PropTypes.array,
-  status: React.PropTypes.string,
-  onFetchRepos: React.PropTypes.func,
-  //table默认高度
-  tableDefaultHeight: React.PropTypes.number.isRequired,
-  //框架的高度用于计算 table的高度
-  frameHeight: React.PropTypes.number.isRequired,
-};
 
-const defaultProps = {
-  tableDefaultHeight: 400,
-  frameHeight: 140
-};
-// TODO:
-// mixins: [TableResizeMixin],
-class RepoTable extends Component {
-  constructor(props) {
-    super(props);
-  }
 
-  componentDidMount() {
-    const { onFetchRepos } = this.props;
-    onFetchRepos && onFetchRepos();
-  }
-
-  handleChangePage = (dataKey) => {
+const RepoTable = React.createClass({
+  mixins: [TableResizeMixin],
+  propTypes: {
+    data: React.PropTypes.array,
+    status: React.PropTypes.string,
+    onFetchRepos: React.PropTypes.func,
+    //table默认高度
+    tableDefaultHeight: React.PropTypes.number.isRequired,
+    //框架的高度用于计算 table的高度
+    frameHeight: React.PropTypes.number.isRequired,
+  },
+  getDefaultProps() {
+    return {
+      tableDefaultHeight: 400,
+      frameHeight: 140
+    };
+  },
+  handleChangePage(dataKey) {
     const { displayLength } = this.state;
-  }
-
-  handleChangeLength = (dataKey) => {
+  },
+  handleChangeLength(dataKey) {
     this.setState({
       displayLength: dataKey
     });
-  }
-
-  render() {
+  },
+  componentDidMount() {
+    const { onFetchRepos } = this.props;
+    onFetchRepos && onFetchRepos();
+  },
+  render: function () {
 
     const { data, status } = this.props;
     const tableLocale = getTableLocale(status, data);
@@ -54,7 +48,7 @@ class RepoTable extends Component {
       <div className="page-content">
         <PageTitleBar title="Repositories"></PageTitleBar>
         <Table
-          height={this.props.tableHeight}
+          height={this.state.tableHeight}
           data={data}
           headerHeight={40}
           rowHeight={40}
@@ -111,13 +105,14 @@ class RepoTable extends Component {
             <HeaderCell>description</HeaderCell>
             <Cell dataKey="description" />
           </Column>
+
+
+
+
         </Table>
       </div>
     );
   }
-};
+});
 
-RepoTable.propTypes = propTypes;
-RepoTable.defaultProps = defaultProps;
-
-export default TableResizeHoc(RepoTable);
+export default RepoTable;

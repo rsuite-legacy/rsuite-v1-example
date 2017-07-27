@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { Provider } from 'react-redux';
@@ -29,7 +29,7 @@ const store = createStore(
 
 const history = syncHistoryWithStore(hashHistory, store);
 
-ReactDOM.render((
+render((
   <Provider store={store}>
     <Router history={history} routes={routes} />
   </Provider>

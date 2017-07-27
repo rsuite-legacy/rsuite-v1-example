@@ -1,21 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import classNames from 'classnames';
 import { toggleClass } from 'dom-lib';
 
-const propTypes = {
-  over: React.PropTypes.bool
-};
-
-class SidebarToggler extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  handleClick = () => {
+const SidebarToggler = React.createClass({
+  propTypes: {
+    over: React.PropTypes.bool
+  },
+  handleClick() {
     toggleClass(document.body, 'sidebar-hide');
-  }
-
+  },
   render() {
     const classes = classNames(
       'page-sidebar-toggler', {
@@ -27,7 +20,6 @@ class SidebarToggler extends Component {
       </div>
     );
   }
-};
+});
 
-SidebarToggler.propTypes = propTypes;
 export default SidebarToggler;

@@ -1,31 +1,24 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { Header, Navbar, Nav } from 'rsuite';
 import { Link } from 'react-router';
 import { FormattedMessage } from 'react-intl';
 
-const propTypes = {
-  //Logo
-  brand: React.PropTypes.node,
-  //顶部菜单
-  menuItems: React.PropTypes.array,
-};
-
-const contextTypes = {
-  router: React.PropTypes.object.isRequired
-};
-
-class PageHeader extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+const PageHeader = React.createClass({
+  propTypes: {
+    //Logo
+    brand: React.PropTypes.node,
+    //顶部菜单
+    menuItems: React.PropTypes.array,
+  },
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
   renderActiveItem(activeKey) {
     const { activeItem } = this.props;
     return activeItem === activeKey ? 'active' : null;
-  }
-
+  },
   render() {
+
     return (
       <Header inverse >
         <div className="page-container">
@@ -33,12 +26,13 @@ class PageHeader extends Component {
             <Navbar.Brand className="logo">
               <Link to="/">
                 <span className="prefix">R</span>Suite
-              </Link>
+                            </Link>
               <span className="sub-title">An example   ( react + react-router + redux )</span>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
+
             <Nav pullRight>
               <Nav.Item href="https://github.com/rsuite/rsuite-example-admin" >Github</Nav.Item>
             </Nav>
@@ -47,9 +41,6 @@ class PageHeader extends Component {
       </Header>
     );
   }
-};
-
-PageHeader.propTypes = propTypes;
-PageHeader.contextTypes = contextTypes;
+});
 
 export default PageHeader;
