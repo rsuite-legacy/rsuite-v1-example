@@ -1,22 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 import Frame from '../../components/Frame';
 import RepoList from './RepoList';
 
-const LabelGroups = React.createClass({
+class LabelGroups extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-  render: function () {
-
-    const children = this.props.children || (
-      <RepoList />
-    );
+  render() {
     return (
       <Frame>
-        {children}
+        {this.props.children || <RepoList />}
       </Frame>
-
     );
   }
-});
+}
 
 export default LabelGroups;

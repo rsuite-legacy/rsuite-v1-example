@@ -18,7 +18,5 @@ export default (status, data) => {
       </div>
     )
   };
-
   return tableLocale;
-
 };
