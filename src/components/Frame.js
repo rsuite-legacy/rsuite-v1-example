@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import { on, getHeight, addClass, removeClass } from 'dom-lib';
@@ -9,24 +8,19 @@ import PageSidebar from '../components/PageSidebar';
 import PageFooter from '../components/PageFooter';
 import debounce from '../utils/debounce';
 
-const propTypes = {
-  activeItem: React.PropTypes.string,
-  hideSidebar: React.PropTypes.bool,
-};
-
-const contextTypes = {
-  router: React.PropTypes.object.isRequired
-};
-
-const defaultProps = {
-  headerProps: {}
-};
-
-class Frame extends Component {
-  constructor(props){
-    super(props);
-  }
-
+const Frame = React.createClass({
+  propTypes: {
+    activeItem: React.PropTypes.string,
+    hideSidebar: React.PropTypes.bool,
+  },
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+  getDefaultProps() {
+    return {
+      headerProps: {}
+    };
+  },
   fixedFooter() {
 
     let footer = findDOMNode(this.refs.footer);
@@ -36,33 +30,29 @@ class Frame extends Component {
       return;
     }
     removeClass(footer, 'fixed');
-  }
 
+  },
   handleWindowResize() {
     this.fixedFooter();
-  }
-
+  },
   componentDidMount() {
     this._onWindowResizeListener = on(window, 'resize', debounce(this.handleWindowResize, 50));
     this.fixedFooter();
-  }
-
+  },
   componentWillUnmount() {
     if (this._onWindowResizeListener) {
       this._onWindowResizeListener.off();
     }
-  }
-
+  },
   componentWillUpdate() {
     this.fixedFooter();
-  }
-
+  },
   renderSidebar() {
     const { hideSidebar } = this.props;
     return hideSidebar ? null : <PageSidebar />;
-  }
+  },
+  render: function () {
 
-  render() {
     const { activeItem, children, hideSidebar } = this.props;
     const styles = {
       marginLeft: hideSidebar ? 0 : 200
@@ -83,9 +73,6 @@ class Frame extends Component {
 
     );
   }
-};
+});
 
-Frame.propTypes = propTypes;
-Frame.contextTypes = contextTypes;
-Frame.defaultProps = defaultProps;
 export default Frame;

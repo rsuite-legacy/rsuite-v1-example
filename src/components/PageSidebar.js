@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import SidebarMenu from './SidebarMenu';
 import SidebarToggler from './SidebarToggler';
 
-const contextTypes = {
-  menuItems: React.PropTypes.array
-};
+const PageSidebar = React.createClass({
+  contextTypes: {
+    menuItems: React.PropTypes.array
+  },
 
-class PageSidebar extends Component {
-  render() {
+  render: function () {
     return (
       <div className="page-sidebar-wrapper">
         <div className="page-sidebar">
@@ -20,7 +19,5 @@ class PageSidebar extends Component {
       </div>
     );
   }
-};
-
-PageSidebar.contextTypes = contextTypes;
+});
 export default PageSidebar;
