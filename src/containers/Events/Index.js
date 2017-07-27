@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 import Frame from '../../components/Frame';
 import EventList from './EventList';
 
 const MODULE_NAME = 'label';
-const LabelGroups = React.createClass({
+class LabelGroups extends Component{
 
-  render: function () {
+  render() {
 
     const children = this.props.children || (
       <EventList />
@@ -20,6 +20,6 @@ const LabelGroups = React.createClass({
 
     );
   }
-});
+}
 
 export default LabelGroups;

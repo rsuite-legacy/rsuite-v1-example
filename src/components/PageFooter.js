@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const PageFooter = React.createClass({
-
-  render: function () {
+class PageFooter extends Component {
+  render() {
     const classes = classNames('footer', this.props.className);
     return (
       <div className={classes}>
@@ -11,6 +11,6 @@ const PageFooter = React.createClass({
       </div>
     );
   }
-});
+};
 
 export default PageFooter;

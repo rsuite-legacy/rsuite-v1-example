@@ -1,26 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router';
 import { FormattedMessage } from 'react-intl';
 import { toggleClass } from 'dom-lib';
 
-const SidebarMenu = React.createClass({
-  propTypes: {
-    open: React.PropTypes.bool,
-    menuItems: React.PropTypes.array,
-  },
-  getDefaultProps() {
-    return {
-      open: true,
-      menuItems: []
-    };
-  },
-  handleMenuHeaderClick(key) {
+const propTypes = {
+  open: React.PropTypes.bool,
+  menuItems: React.PropTypes.array,
+};
+
+const defaultProps = {
+  open: true,
+  menuItems: []
+};
+
+const contextTypes = {
+  router: React.PropTypes.object.isRequired
+};
+
+class SidebarMenu extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  handleMenuHeaderClick = (key) => {
     toggleClass(ReactDOM.findDOMNode(this.refs[key]), 'open');
-  },
-  contextTypes: {
-    router: React.PropTypes.object.isRequired
-  },
+  }
+
   renderItems() {
     const { menuItems } = this.props;
     const className = this.props.open ? 'open' : '';
@@ -32,10 +39,7 @@ const SidebarMenu = React.createClass({
           key={index}
           ref={item.localeKey + index}
         >
-          <a onClick={() => {
-            this.handleMenuHeaderClick(item.localeKey + index);
-          }}
-          >
+          <a >
             <i className={item.icon}></i>
             <span className="title"><FormattedMessage id={item.localeKey} /></span>
             <span className="arrow"></span>
@@ -44,7 +48,8 @@ const SidebarMenu = React.createClass({
         </li>
       );
     });
-  },
+  }
+
   renderSubItems(subItems = []) {
 
     if (!subItems.length) {
@@ -66,14 +71,19 @@ const SidebarMenu = React.createClass({
         }
       </ul>
     );
-  },
-  render: function () {
+  }
+
+  render() {
     return (
       <ul className="page-sidebar-menu">
         {this.renderItems()}
       </ul>
     );
   }
-});
+};
+
+SidebarMenu.propTypes = propTypes;
+SidebarMenu.defaultProps = defaultProps;
+SidebarMenu.contextTypes = contextTypes;
 
 export default SidebarMenu;

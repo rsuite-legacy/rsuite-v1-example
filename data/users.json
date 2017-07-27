@@ -1,0 +1,3372 @@
+{
+  "code": "200000",
+  "result": {
+    "items": [
+      {
+        "id": 1,
+        "name": "zodiac",
+        "password": null,
+        "email": "mxzodiac@gmail.com",
+        "lastLoginTime": 1493107344000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 1,
+          "name": "ROLE_ADMIN"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 5,
+        "name": "peter\r\n",
+        "password": null,
+        "email": "peter.sun@hypers.com",
+        "lastLoginTime": 1481711166000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 2,
+          "name": "ROLE_GROUP"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 8,
+        "name": "hyperanalytics",
+        "password": null,
+        "email": "zodiac.ma@hypers.com",
+        "lastLoginTime": 1479277063000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 11,
+        "name": "harrie",
+        "password": null,
+        "email": "harrie.wang@hypers.com",
+        "lastLoginTime": 1477639394000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 14,
+        "name": "tony",
+        "password": null,
+        "email": "tony.sun@hypers.com",
+        "lastLoginTime": 1479968504000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 21,
+        "name": "jerry",
+        "password": null,
+        "email": "jerry@goyoo.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 29,
+        "name": "bruce",
+        "password": null,
+        "email": "bruce.shen@hypers.com",
+        "lastLoginTime": 1481706631000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 31,
+        "name": "demo",
+        "password": null,
+        "email": "analytics-demo@hypers.com",
+        "lastLoginTime": 1479107601000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 51,
+        "name": "fancy",
+        "password": null,
+        "email": "fancy.jin@hypers.com",
+        "lastLoginTime": 1480666686000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 61,
+        "name": "demo_hypers",
+        "password": null,
+        "email": "demo@hypers.com",
+        "lastLoginTime": 1481875495000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 86,
+        "name": "lhc",
+        "password": null,
+        "email": "haochen.liu@hypers.com",
+        "lastLoginTime": 1487736426000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 88,
+        "name": "beiyu",
+        "password": null,
+        "email": "beiyu.lu@hypers.com",
+        "lastLoginTime": 1482114752000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 90,
+        "name": "simon",
+        "password": null,
+        "email": "simon.guo@hypers.com",
+        "lastLoginTime": 1493174584000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 1,
+          "name": "ROLE_ADMIN"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 97,
+        "name": "lhc_test1",
+        "password": null,
+        "email": "thrall.leo@gmail.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1479376497000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 99,
+        "name": "lhc_test",
+        "password": null,
+        "email": "416491007@qq.com",
+        "lastLoginTime": 1479380014000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1479376978000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 101,
+        "name": "fyh",
+        "password": null,
+        "email": "yuhao.fu@hypers.com",
+        "lastLoginTime": 1493120857000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 1,
+          "name": "ROLE_ADMIN"
+        },
+        "createTime": 1479380126000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 105,
+        "name": "johnny.wang",
+        "password": null,
+        "email": "johnny.wang@bds-analytics.com",
+        "lastLoginTime": 1480907396000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1479868452000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 109,
+        "name": "gillian.zhou",
+        "password": null,
+        "email": "gillian.zhou@hypers.com",
+        "lastLoginTime": 1482203210000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1479971973000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 113,
+        "name": "mjn",
+        "password": null,
+        "email": "chinavivaki+mjn@gmail.com",
+        "lastLoginTime": 1481862440000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1479979852000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 123,
+        "name": "test_liantongxing",
+        "password": null,
+        "email": "test_liantongxing@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1481089873000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 127,
+        "name": "yvonne",
+        "password": null,
+        "email": "yvonne.gong@hypers.com",
+        "lastLoginTime": 1481092122000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1481091699000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 131,
+        "name": "Eric",
+        "password": null,
+        "email": "erichou@maxxipoint.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1481096968000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 135,
+        "name": "buick",
+        "password": null,
+        "email": "chinavivaki+buick@gmail.com",
+        "lastLoginTime": 1482152938000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1481191717000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 143,
+        "name": "Kun",
+        "password": null,
+        "email": "kun.lu@publicismedia.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 2,
+          "name": "ROLE_GROUP"
+        },
+        "createTime": 1482152277000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 150,
+        "name": "test_new",
+        "password": null,
+        "email": "test_new2@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1484038841000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 156,
+        "name": "fyh_ggz",
+        "password": null,
+        "email": "fyh_ggz@test.com",
+        "lastLoginTime": 1484536373000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1484215604000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 159,
+        "name": "fyh_yys111",
+        "password": null,
+        "email": "fyh_yys2@hypers.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 2,
+          "name": "ROLE_GROUP"
+        },
+        "createTime": 1484536543000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 165,
+        "name": "测试DMP用广告主账户",
+        "password": null,
+        "email": "ggz@dmp.com",
+        "lastLoginTime": 1490771400000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1484730761000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 168,
+        "name": "测试DMP用运营商账号",
+        "password": null,
+        "email": "yys@dmp.com",
+        "lastLoginTime": 1493172704000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 2,
+          "name": "ROLE_GROUP"
+        },
+        "createTime": 1484731092000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 234,
+        "name": "111",
+        "password": null,
+        "email": "xxx@emgil.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": null,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 237,
+        "name": "222",
+        "password": null,
+        "email": "xxx@emgil2.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": null,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 249,
+        "name": "adminUserInSaaS",
+        "password": null,
+        "email": "871983331a@qq.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1486650250000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 255,
+        "name": "slsuper",
+        "password": null,
+        "email": "slsuper@qq.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1486709418000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 258,
+        "name": "系统",
+        "password": null,
+        "email": "hehuabo520a@sina.cn",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1486710062000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 261,
+        "name": "testcreateSuperAdminbyHAC",
+        "password": null,
+        "email": "testcreatesuperadminbyhac@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1486715381000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 267,
+        "name": "super",
+        "password": null,
+        "email": "super@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1486908325000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 270,
+        "name": "GroupCreatedByHACHHB_super",
+        "password": null,
+        "email": "groupcreatedbyhachhb_super@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1486908975000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 276,
+        "name": "GroupCreatedByHACHHB3_super",
+        "password": null,
+        "email": "groupcreatedbyhachhb3_super@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1486997732000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 282,
+        "name": "slsuper3",
+        "password": null,
+        "email": "slsuper3@qq.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487043642000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 288,
+        "name": "HHBTest3_super",
+        "password": null,
+        "email": "hhbtest3_super@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487085452000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 294,
+        "name": "lijing.ye",
+        "password": null,
+        "email": "lijing.ye@hypers.com",
+        "lastLoginTime": 1492999044000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487140997000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 300,
+        "name": "admin",
+        "password": null,
+        "email": "zihao.liu@hypers.com",
+        "lastLoginTime": 1492078701000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487142420000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 306,
+        "name": "zhuyantest",
+        "password": null,
+        "email": "123@qq.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487146635000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 315,
+        "name": "gpx",
+        "password": null,
+        "email": "peixiong.gao@hypers.com",
+        "lastLoginTime": 1492392489000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 2,
+          "name": "ROLE_GROUP"
+        },
+        "createTime": 1487304052000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 318,
+        "name": "hhb",
+        "password": null,
+        "email": "huabo.he@hypers.com",
+        "lastLoginTime": 1492659643000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 1,
+          "name": "ROLE_ADMIN"
+        },
+        "createTime": 1487304320000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 324,
+        "name": "fyhtest运营商",
+        "password": null,
+        "email": "fyhtest_yys@dmp.com",
+        "lastLoginTime": 1487312692000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 2,
+          "name": "ROLE_GROUP"
+        },
+        "createTime": 1487312496000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 330,
+        "name": "demo_dmp",
+        "password": null,
+        "email": "demo@dmp.com",
+        "lastLoginTime": 1492135937000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 2,
+          "name": "ROLE_GROUP"
+        },
+        "createTime": 1487318914000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 342,
+        "name": "测试大写用户名",
+        "password": null,
+        "email": "test@dmp.com",
+        "lastLoginTime": 1487663755000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487663332000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 345,
+        "name": "test_hwa_root",
+        "password": null,
+        "email": "test_hwa_root@root.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487663448000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 348,
+        "name": "sl_test_hwa_super",
+        "password": null,
+        "email": "sl_test_hwa_super@qq.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487664630000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 351,
+        "name": "用户D",
+        "password": null,
+        "email": "changge@qq.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487665030000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 360,
+        "name": "hma_user_002",
+        "password": null,
+        "email": "hma_user_002@qq.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487749946000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 363,
+        "name": "dj",
+        "password": null,
+        "email": "jun.du@hypers.com",
+        "lastLoginTime": 1490754166000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487819874000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 366,
+        "name": "0223super",
+        "password": null,
+        "email": "0223super@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487846776000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 372,
+        "name": "zhaoshen",
+        "password": null,
+        "email": "sen.zhao@hypers.com",
+        "lastLoginTime": 1487918508000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487903503000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 378,
+        "name": "test_root_0208",
+        "password": null,
+        "email": "test_root_0208@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1488248274000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 384,
+        "name": "Monday",
+        "password": null,
+        "email": "monday@123.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1488277516000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 390,
+        "name": "lll",
+        "password": null,
+        "email": "hwa@dmp.com",
+        "lastLoginTime": 1488528938000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1488527886000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 399,
+        "name": "hac_monitor",
+        "password": null,
+        "email": "hac_monitor@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1488855035000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 405,
+        "name": "HVAGroup3-super",
+        "password": null,
+        "email": "hvagroup3-super@hva.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1489550372000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 411,
+        "name": "HHBGROUP2-super",
+        "password": null,
+        "email": "hhbgroup2-super@hva.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1489903122000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 417,
+        "name": "测试系统自动新建用户",
+        "password": null,
+        "email": "new@dmp.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1489990388000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 423,
+        "name": "saasadmintest",
+        "password": null,
+        "email": "saasadmintest@hypers.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1490163880000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 425,
+        "name": "HHBTEST8-super",
+        "password": null,
+        "email": "hhbtest8-super@hva.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1490799907000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 437,
+        "name": "drinkstest",
+        "password": null,
+        "email": "drinkstest@drinkstest.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1490844962000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 449,
+        "name": "``````sl``````",
+        "password": null,
+        "email": "sl@qq.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491036043000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 455,
+        "name": "test-nnnnnnffff1111111111",
+        "password": null,
+        "email": "test-nnnnnn@test_nnnnn.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491387864000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 482,
+        "name": "test_change",
+        "password": null,
+        "email": "test@test1111111.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491553943000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 491,
+        "name": "root_tttt",
+        "password": null,
+        "email": "root_tttt@t.tt",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491554614000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 521,
+        "name": "相关标签图谱用户",
+        "password": null,
+        "email": "label@dmp.com",
+        "lastLoginTime": 1493086939000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491882839000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 527,
+        "name": "LabelRelation",
+        "password": null,
+        "email": "label2@dmp.com",
+        "lastLoginTime": 1493086962000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1492591822000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 533,
+        "name": "sl-testview1",
+        "password": null,
+        "email": "sl-testview1@qq.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1492594070000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 536,
+        "name": "sl-testview2",
+        "password": null,
+        "email": "sl-testview2@qq.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1492594086000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 542,
+        "name": "xiaoxiong_n",
+        "password": null,
+        "email": "xiaoxiong_n@hypers.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1492682709000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 1,
+          "name": "SaaS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 17,
+        "name": "vivaki",
+        "password": null,
+        "email": "chinavivaki+vivaki@gmail.com",
+        "lastLoginTime": 1479795431000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 26,
+        "name": "bmwvivaki",
+        "password": null,
+        "email": "chinavivaki+bmw@gmail.com",
+        "lastLoginTime": 1481866579000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 2,
+          "name": "ROLE_GROUP"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 33,
+        "name": "PM-Demo",
+        "password": null,
+        "email": "chinavivaki+visa@gmail.com",
+        "lastLoginTime": 1481869296000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 2,
+          "name": "ROLE_GROUP"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 39,
+        "name": "demovivaki",
+        "password": null,
+        "email": "chinavivaki+demo@gmail.com",
+        "lastLoginTime": 1481714455000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 55,
+        "name": "mysn",
+        "password": null,
+        "email": "chinavivaki+mysn@gmail.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 71,
+        "name": "vipkid",
+        "password": null,
+        "email": "chinavivaki+vipkid@gmail.com",
+        "lastLoginTime": 1479801041000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 73,
+        "name": "efeducate",
+        "password": null,
+        "email": "chinavivaki+ef@gmail.com",
+        "lastLoginTime": 1481790971000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 78,
+        "name": "homecredit",
+        "password": null,
+        "email": "chinavivaki+homecredit@gmail.com",
+        "lastLoginTime": 1481536554000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 84,
+        "name": "lexusvivaki",
+        "password": null,
+        "email": "chinavivaki+lexus@gmail.com",
+        "lastLoginTime": 1481887998000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 92,
+        "name": "chinavivaki",
+        "password": null,
+        "email": "wenyuan.cai@hypers.com",
+        "lastLoginTime": 1479375406000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 117,
+        "name": "cyril",
+        "password": null,
+        "email": "cyril.shi@publicismedia.com",
+        "lastLoginTime": 1480474665000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1480339331000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 121,
+        "name": "Shelley Liu",
+        "password": null,
+        "email": "shelley.liu@publicismedia.com",
+        "lastLoginTime": 1480843048000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1480842593000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 147,
+        "name": "Admin|系统管理员",
+        "password": null,
+        "email": "zephyr.guan@publicismedia.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 1,
+          "name": "ROLE_ADMIN"
+        },
+        "createTime": 1482219933000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 336,
+        "name": "test_pm_putong",
+        "password": null,
+        "email": "test_pm_putong@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487656225000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 354,
+        "name": "test_hwa_adminn",
+        "password": null,
+        "email": "test_hwa_adminn@root.com",
+        "lastLoginTime": 1487673777000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487666347000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 393,
+        "name": "testtheme-edge",
+        "password": null,
+        "email": "testtheme-edge@hypers.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1488528281000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 5,
+          "name": "Vivaki",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 43,
+        "name": "maxus",
+        "password": null,
+        "email": "arvato.bertelsmann.cn+maxus@gmail.com",
+        "lastLoginTime": 1477467746000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 7,
+          "name": "Arvato",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 46,
+        "name": "amber",
+        "password": null,
+        "email": "amber.feng1@bertelsmann.com.cn",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 7,
+          "name": "Arvato",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 49,
+        "name": "echo",
+        "password": null,
+        "email": "echo.hu@bertelsmann.com.cn",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 7,
+          "name": "Arvato",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 67,
+        "name": "sisley",
+        "password": null,
+        "email": "arvato.bertelsmann.cn+sisley@gmail.com",
+        "lastLoginTime": 1476962999000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 7,
+          "name": "Arvato",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 75,
+        "name": "maxus2",
+        "password": null,
+        "email": "arvato.bertelsmann.cn+maxus2@gmail.com",
+        "lastLoginTime": 1476962999000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 2,
+          "name": "ROLE_GROUP"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 7,
+          "name": "Arvato",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 94,
+        "name": "arvato_sys",
+        "password": null,
+        "email": "bruce.shen@outlook.com",
+        "lastLoginTime": 1479375235000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1472454198000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 7,
+          "name": "Arvato",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 309,
+        "name": "test-newwwwweeeeeee",
+        "password": null,
+        "email": "test_newwww@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1487154442000,
+        "creator": {
+          "id": 1,
+          "name": "zodiac"
+        },
+        "group": {
+          "id": 7,
+          "name": "Arvato",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 461,
+        "name": "admin_test",
+        "password": null,
+        "email": "admin_test@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491536078000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 11,
+          "name": "HyperS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 467,
+        "name": "dfdsafds",
+        "password": null,
+        "email": "affaf@12313.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491536277000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 11,
+          "name": "HyperS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 470,
+        "name": "root_test",
+        "password": null,
+        "email": "root_test@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491536310000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 11,
+          "name": "HyperS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 473,
+        "name": "test_super",
+        "password": null,
+        "email": "test_super_hypers@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491536362000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 11,
+          "name": "HyperS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 476,
+        "name": "admin_amdin",
+        "password": null,
+        "email": "admin_amdin@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491536660000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 11,
+          "name": "HyperS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 488,
+        "name": "hypersTest",
+        "password": null,
+        "email": "hyperstest@hypers.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491554400000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 11,
+          "name": "HyperS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 494,
+        "name": "root_t",
+        "password": null,
+        "email": "root_t@t.tt",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491554691000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 11,
+          "name": "HyperS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 515,
+        "name": "test_rootttttt",
+        "password": null,
+        "email": "test_rootttttt@t.tt",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491794299000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 11,
+          "name": "HyperS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 548,
+        "name": "superadmin",
+        "password": null,
+        "email": "hma-superadmin@hypers.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1493091449000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 11,
+          "name": "HyperS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 554,
+        "name": "jingjing.zhang",
+        "password": null,
+        "email": "jingjing.zhangz@hypers.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1493100792000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 11,
+          "name": "HyperS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 557,
+        "name": "jingjing.zhang",
+        "password": null,
+        "email": "jingjing.zhang@hypers.com",
+        "lastLoginTime": 1493101923000,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1493101613000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 11,
+          "name": "HyperS",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 497,
+        "name": "t",
+        "password": null,
+        "email": "t@ttt.ttt",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491555135000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 17,
+          "name": "root",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 503,
+        "name": "root111",
+        "password": null,
+        "email": "root1111@root.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491561104000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 23,
+          "name": "root1",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 509,
+        "name": "root1111",
+        "password": null,
+        "email": "root1111@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491794133000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 29,
+          "name": "root11",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      },
+      {
+        "id": 512,
+        "name": "root_admin111",
+        "password": null,
+        "email": "root_admin111@test.com",
+        "lastLoginTime": null,
+        "status": "ENABLE",
+        "systemRole": {
+          "id": 3,
+          "name": "ROLE_USER"
+        },
+        "createTime": 1491794203000,
+        "creator": {
+          "id": 258,
+          "name": "系统"
+        },
+        "group": {
+          "id": 29,
+          "name": "root11",
+          "status": "ENABLE",
+          "creator": null,
+          "createTime": null
+        },
+        "view": null,
+        "routers": null,
+        "avatar": null,
+        "theme": null,
+        "preLoadResource": null,
+        "apps": null
+      }
+    ]
+  },
+  "page": {
+    "current": 1,
+    "pagesize": 1000,
+    "total": 112
+  }
+}
