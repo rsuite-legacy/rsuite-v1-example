@@ -1,12 +1,28 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Table, Column, Cell, HeaderCell } from 'rsuite-table';
+import {
+  Dropdown
+} from 'rsuite';
+import {
+  Table,
+  Column,
+  Cell,
+  HeaderCell
+} from 'rsuite-table';
 import { FormattedMessage } from 'react-intl';
 
 import { TableResizeHoc } from '../../hoc';
 import PageTitleBar from '../../components/PageTitleBar';
 import TableView from '../TableView';
-import { ObjectCell, LinkCell, StatusCell, DateTimeCell, SystemRoleCell, ActionCell } from '../CustomTableCells';
+import {
+  ObjectCell,
+  LinkCell,
+  StatusCell,
+  DateTimeCell,
+  SystemRoleCell,
+  ActionCell
+} from '../CustomTableCells';
+import chain from '../../utils/createChainedFunction';
 
 const propTypes = {
   data: React.PropTypes.array,
@@ -26,6 +42,7 @@ const defaultProps = {
 class UserTable extends Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   componentDidMount() {
@@ -49,20 +66,29 @@ class UserTable extends Component {
       total: page.total || 0
     });
   }
+  getSystemRoleFilterComponent() {
+    const { params } = this.state;
+    let items = [
+      <Dropdown.Item key={1} eventKey="ALL" >全部</Dropdown.Item>,
+      <Dropdown.Item key={2} eventKey="ROLE_USER" >用户</Dropdown.Item>,
+      <Dropdown.Item key={3} eventKey="ROLE_GROUP" >管理员</Dropdown.Item>
+    ];
+    return (
+      <Dropdown activeKey={'ALL'} select onSelect={chain(this.handleChangeSystemRole)}>
+        {items}
+      </Dropdown>
+    );
+  }
 
   getFilterPlugins() {
-    // let plugins = [
-    //   {
-    //     label: '系统角色',
-    //     component: this.getSystemRoleFilterComponent()
-    //   }
-    // ];
-    // const userGroup = {
-    //   label: '用户组',
-    //   component: this.getUserGroupFilterComponent()
-    // };
-    // return plugins;
-    return [];
+    let plugins = [
+      {
+        label: '系统角色',
+        component: this.getSystemRoleFilterComponent()
+      }
+    ];
+    return plugins;
+
   }
 
   getTableViewColumns() {
@@ -109,15 +135,6 @@ class UserTable extends Component {
         label: '用户组',
         cell: <ObjectCell dataKey="group.name" />
       },
-      // {
-      //   col: {
-      //     width: 200,
-      //     sortable: true,
-      //     resizable: true
-      //   },
-      //   label: '系统角色',
-      //   cell: <SystemRoleCell dataKey="systemRole.name" />
-      // },
       {
         col: {
           width: 200,
@@ -148,6 +165,10 @@ class UserTable extends Component {
 
     // cols.push(operationCell);
     return cols;
+  }
+
+  handleChangeSystemRole(key) {
+    alert('SELECT' + key);
   }
 
   loadTableData = (params) => {
