@@ -3,5 +3,6 @@ export default {
   Events: 'Events',
   Repositories: 'Repositories',
   noDataFound: 'No Data Found',
-  loading: 'loading...'
+  loading: 'loading...',
+  Users: 'Users'
 };
