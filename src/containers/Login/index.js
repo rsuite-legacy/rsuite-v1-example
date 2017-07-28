@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import Frame from '../../components/Frame';
-import RepoList from './RepoList';
+import Login from './Login';
 
 class LabelGroups extends Component {
   constructor(props) {
@@ -10,13 +9,13 @@ class LabelGroups extends Component {
 
   render() {
     return (
-      <Frame>
-        {this.props.children || <RepoList />}
+      <Frame
+        hideSidebar
+      >
+        {this.props.children || <Login />}
       </Frame>
     );
   }
 }
 
 export default LabelGroups;
-
-

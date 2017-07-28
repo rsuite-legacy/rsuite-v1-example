@@ -10,7 +10,8 @@ module.exports = {
     childRoutes: [
       require('./events'),
       require('./repos'),
-      require('./users')
+      require('./users'),
+      require('./login')
     ]
   }]
 };

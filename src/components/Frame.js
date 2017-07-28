@@ -12,6 +12,7 @@ import debounce from '../utils/debounce';
 const propTypes = {
   activeItem: React.PropTypes.string,
   hideSidebar: React.PropTypes.bool,
+  hideHeader: React.PropTypes.bool,
 };
 
 const contextTypes = {
@@ -23,7 +24,7 @@ const defaultProps = {
 };
 
 class Frame extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
 
@@ -38,7 +39,7 @@ class Frame extends Component {
     removeClass(footer, 'fixed');
   }
 
-  handleWindowResize() {
+  handleWindowResize = () => {
     this.fixedFooter();
   }
 
@@ -57,21 +58,26 @@ class Frame extends Component {
     this.fixedFooter();
   }
 
+  renderHeder() {
+    const { hideHeader, activeItem } = this.props;
+    return !hideHeader && <PageHeader
+      activeItem={activeItem}
+    />;
+  }
+
   renderSidebar() {
     const { hideSidebar } = this.props;
     return hideSidebar ? null : <PageSidebar />;
   }
 
   render() {
-    const { activeItem, children, hideSidebar } = this.props;
+    const { children, hideSidebar } = this.props;
     const styles = {
       marginLeft: hideSidebar ? 0 : 200
     };
     return (
       <div>
-        <PageHeader
-          activeItem={activeItem}
-        />
+        {this.renderHeder()}
         <div className='page-container page-content' ref='content'>
           {this.renderSidebar()}
           <div className='page-content-wrapper' style={styles}>

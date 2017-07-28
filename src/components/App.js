@@ -12,6 +12,9 @@ const propTypes = {
   locale: React.PropTypes.string
 };
 
+const contextTypes = {
+  router: React.PropTypes.object,
+};
 
 const childContextTypes = {
   menuItems: React.PropTypes.array,
@@ -24,7 +27,7 @@ class App extends Component {
 
   getChildContext() {
     return {
-      menuItems: this.props.menuItems
+      menuItems: this.props.menuItems,
     };
   }
 
@@ -44,8 +47,8 @@ class App extends Component {
 }
 
 App.propTypes = propTypes;
-
 App.childContextTypes = childContextTypes;
+App.contextTypes = contextTypes;
 
 export default App;
 
