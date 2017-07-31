@@ -6,9 +6,10 @@ import { RepoTable } from '../../components/Repos';
 
 
 function mapState2Props(state) {
+  const currentStatus = state.stroe.repos;
   return {
-    data: state.store.repos.data,
-    status: state.store.repos.status
+    data: currentStatus.data,
+    status: currentStatus.status
   };
 }
 

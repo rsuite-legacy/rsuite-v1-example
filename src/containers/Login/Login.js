@@ -7,8 +7,9 @@ import Login from '../../components/Login';
 
 
 function mapState2Props(state) {
+  const currentStatus = state.stroe.login;
   return {
-    status: state.store.login.status
+    status: currentStatus.status
   };
 }
 
