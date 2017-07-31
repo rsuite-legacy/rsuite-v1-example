@@ -15,4 +15,4 @@ export default function events(state = initialState, action) {
     default:
       return state;
   }
-};
+}

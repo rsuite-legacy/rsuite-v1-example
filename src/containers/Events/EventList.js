@@ -6,9 +6,10 @@ import { EventTable } from '../../components/Events';
 
 
 function mapState2Props(state) {
+  const getState = state.store.events;
   return {
-    data: state.store.events.data,
-    status: state.store.events.status
+    data: getState.data,
+    status: getState.status
   };
 }
 

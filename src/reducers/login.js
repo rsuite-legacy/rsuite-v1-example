@@ -15,4 +15,4 @@ export default function login(state = initialState, action) {
     default:
       return state;
   }
-};
+}

@@ -15,4 +15,4 @@ export default function repos(state = initialState, action) {
     default:
       return state;
   }
-};
+}
