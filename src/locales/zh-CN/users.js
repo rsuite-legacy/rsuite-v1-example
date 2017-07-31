@@ -3,7 +3,12 @@ export default {
   userList: '用户列表',
   createUser: '新建用户',
   editUser: '编辑用户',
-
+  status: '状态',
+  username: '用户名',
+  email: '邮箱',
+  userGroup: '用户组',
+  creator: '创建者',
+  createDatetime: '创建时间',
   roleUser: '用户',
   roleGroup: '运营商',
   roleAdmin: '平台',

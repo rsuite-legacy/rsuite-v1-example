@@ -34,6 +34,10 @@ const defaultProps = {
   frameHeight: 140
 };
 
+const contextTypes = {
+  intl: PropTypes.object.isRequired,
+};
+
 class UserTable extends Component {
   constructor(props) {
     super(props);
@@ -98,7 +102,7 @@ class UserTable extends Component {
           sortable: true,
           resizable: true
         },
-        label: '状态',
+        label: <FormattedMessage id="status" />,
         cell: <StatusCell dataKey="status" />
       },
       {
@@ -108,7 +112,7 @@ class UserTable extends Component {
           sortable: true,
           resizable: true
         },
-        label: 'username',
+        label: <FormattedMessage id="username" />,
         cell: <Cell dataKey="name" />
       },
       {
@@ -117,7 +121,7 @@ class UserTable extends Component {
           sortable: true,
           resizable: true
         },
-        label: 'email',
+        label: <FormattedMessage id="email" />,
         cell: <Cell dataKey="email" />
       },
       {
@@ -126,7 +130,7 @@ class UserTable extends Component {
           sortable: true,
           resizable: true
         },
-        label: '用户组',
+        label: <FormattedMessage id="userGroup" />,
         cell: <ObjectCell dataKey="group.name" />
       },
       {
@@ -135,7 +139,7 @@ class UserTable extends Component {
           sortable: true,
           resizable: true
         },
-        label: '创建者',
+        label: <FormattedMessage id="creator" />,
         cell: <ObjectCell dataKey="creator.name" />
       },
       {
@@ -144,7 +148,7 @@ class UserTable extends Component {
           sortable: true,
           resizable: true
         },
-        label: '创建时间',
+        label: <FormattedMessage id="createDatetime" />,
         cell: <DateTimeCell dataKey="createTime" />
       },
     ];
@@ -194,5 +198,6 @@ class UserTable extends Component {
 
 UserTable.propTypes = propTypes;
 UserTable.defaultProps = defaultProps;
+UserTable.contextTypes = contextTypes;
 
 export default UserTable;
