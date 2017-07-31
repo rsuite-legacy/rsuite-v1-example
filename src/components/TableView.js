@@ -27,7 +27,11 @@ import { getLocale } from './TableLocale';
 import chain from '../utils/createChainedFunction';
 
 const FRAME_HEIGHT = 136;  // 上下 50 + 上下 18 padding
+const TABLE_TOOLBAR_HEIGHT = 72;
 
+const PAGE_TABS_HEIGHT = 62;
+const PAGE_TOOLBAR_HEIGHT = 78;
+const PAGE_TITLE_HEIGHT = 50;
 const propTypes = {
   data: PropTypes.array,
   // isDataReady: PropTypes.string,
@@ -181,10 +185,23 @@ class TableView extends Component {
   }
 
   calculateTableHeight() {
-    const { tableDefaultHeight } = this.props;
-    const height = getHeight(global) - FRAME_HEIGHT;
+    const { tableDefaultHeight, hasPageTabs, hasPageToolbar, tableHeight } = this.props;
+    if (tableHeight) {
+      return tableHeight;
+    }
+
+    let height = getHeight(global) - FRAME_HEIGHT - PAGE_TITLE_HEIGHT - TABLE_TOOLBAR_HEIGHT;
+
+    if (hasPageTabs) {
+      height -= PAGE_TABS_HEIGHT;
+    }
+    if (hasPageToolbar) {
+      height -= PAGE_TOOLBAR_HEIGHT;
+    }
+
     return height < tableDefaultHeight ? tableDefaultHeight : height;
   }
+
   loadTableData = (params) => {
     const clearParams = _(params).omitBy(_.isUndefined).value();
     this.props.onLoadData(clearParams);

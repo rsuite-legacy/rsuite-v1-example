@@ -15,8 +15,6 @@ const propTypes = {
   tableHeight: PropTypes.number.isRequired,
   // table默认高度
   tableDefaultHeight: PropTypes.number.isRequired,
-  // 框架的高度用于计算 table的高度
-  frameHeight: PropTypes.number.isRequired,
 };
 
 const defaultProps = {

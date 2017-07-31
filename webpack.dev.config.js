@@ -5,7 +5,7 @@ const commonRules = require('./webpack/rules');
 
 const config = {
   entry: [
-    'webpack-dev-server/client?http://127.0.0.1:3000',
+    'webpack-dev-server/client?http://127.0.0.1:3002',
     'webpack/hot/only-dev-server',
     resolve(__dirname, 'src/index')
   ],
