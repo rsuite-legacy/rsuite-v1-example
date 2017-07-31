@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Table, Column, Cell, HeaderCell } from 'rsuite-table';
-import { FormattedMessage } from 'react-intl';
 
 import { TableResizeHoc } from '../../hoc';
 import PageTitleBar from '../../components/PageTitleBar';
 
-import { StatesCell, ObjectCell } from '../CustomTableCells';
+import { ObjectCell } from '../CustomTableCells';
 import { CommitsCell } from './CustomTableCells';
 import getTableLocale from '../getTableLocale';
 
 const propTypes = {
-  data: React.PropTypes.array,
-  status: React.PropTypes.string,
-  onFetchEvents: React.PropTypes.func,
-  //table默认高度
-  tableDefaultHeight: React.PropTypes.number.isRequired,
-  //框架的高度用于计算 table的高度
-  frameHeight: React.PropTypes.number.isRequired,
+  data: PropTypes.array,
+  status: PropTypes.string,
+  onFetchEvents: PropTypes.func,
+  tableHeight: PropTypes.number.isRequired,
+  // table默认高度
+  tableDefaultHeight: PropTypes.number.isRequired,
+  // 框架的高度用于计算 table的高度
+  frameHeight: PropTypes.number.isRequired,
 };
 
 const defaultProps = {
@@ -26,13 +26,10 @@ const defaultProps = {
 };
 
 class EventTable extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     const { onFetchEvents } = this.props;
-    onFetchEvents && onFetchEvents();
+    onFetchEvents();
   }
 
   handleChangePage = (dataKey) => {
@@ -51,7 +48,7 @@ class EventTable extends Component {
 
     return (
       <div className="page-content">
-        <PageTitleBar title="Events"></PageTitleBar>
+        <PageTitleBar title="Events" />
         <Table
           height={this.props.tableHeight}
           data={data}

@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { on, getHeight } from 'dom-lib';
-import debounce from '../utils/debounce';
-import { getItem, setItem } from '../utils/storage';
-
 import {
   Table,
   Column,
@@ -17,25 +14,26 @@ import {
   Button,
   FormControl
 } from 'rsuite';
+import { Link } from 'react-router';
 import { FormattedMessage } from 'react-intl';
 import ButtonGroupStatusRadio from './ButtonGroupStatusRadio';
-import { Link } from 'react-router';
 import CustomTablePagination from './CustomTablePagination';
 import { OrderCell } from './CustomTableCells';
 import SearchInput from './SearchInput';
-import { TableViewHoc } from '../hoc';
+import debounce from '../utils/debounce';
+import { getItemByUid, setItem } from '../utils/storage';
 
 import { getLocale } from './TableLocale';
-import { getItemByUid } from '../utils/storage';
 import chain from '../utils/createChainedFunction';
 
-const FRAME_HEIGHT = 136;  //上下 50 + 上下 18 padding
+const FRAME_HEIGHT = 136;  // 上下 50 + 上下 18 padding
 
 const propTypes = {
   data: PropTypes.array,
   // isDataReady: PropTypes.string,
   onLoadData: PropTypes.func.isRequired,
   headerHeight: PropTypes.number,
+  tableDefaultHeight: PropTypes.number,
   rowHeight: PropTypes.number,
   options: PropTypes.object,
   columns: PropTypes.array.isRequired,
@@ -58,7 +56,7 @@ class TableView extends Component {
     const { options } = props;
     super(props);
     const keys = _.get(options, 'searchControl.keys');
-    const filterColumn = this._getDefaultKey(keys);
+    const filterColumn = this.getDefaultKey(keys);
     this.state = {
       cacheKey: props.cacheKey,
       params: {
@@ -73,89 +71,27 @@ class TableView extends Component {
     };
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    const { data, isDataReady } = this.props;
-    return !_.eq(nextProps, this.props);
-
-  }
   componentWillMount() {
     this.setState({
       tableHeight: this.calculateTableHeight()
     });
   }
   componentDidMount() {
-    this._onWindowResizeListener = on(window, 'resize', debounce(this.handleWindowResize, 50));
+    this.onWindowResizeListener = on(window, 'resize', debounce(this.handleWindowResize, 50));
+  }
+
+  shouldComponentUpdate(nextProps) {
+    return !_.eq(nextProps, this.props);
+
   }
 
   componentWillUnmount() {
-    if (this._onWindowResizeListener) {
-      this._onWindowResizeListener.off();
+    if (this.onWindowResizeListener) {
+      this.onWindowResizeListener.off();
     }
   }
 
-  calculateTableHeight() {
-    const { tableDefaultHeight } = this.props;
-    const height = getHeight(global) - FRAME_HEIGHT;
-    return height < tableDefaultHeight ? tableDefaultHeight : height;
-  }
-
-  handleWindowResize() {
-    this.setState({
-      tableHeight: this.calculateTableHeight()
-    });
-  }
-
-  //点击分页
-  handleChangePage = (dataKey) => {
-    const params = Object.assign({}, this.state.params, {
-      page: dataKey
-    });
-    this.loadTableData(params);
-    this.setState({ params });
-  }
-  //切换每页显示数目
-  handleChangeLength = (dataKey) => {
-    const params = Object.assign({}, this.state.params, {
-      page: 1,
-      pagesize: dataKey
-    });
-    this.loadTableData(params);
-    this.setState({ params });
-  }
-  //关键字搜索
-  handleSearch = (word) => {
-    const params = Object.assign({}, this.state.params, {
-      page: 1,
-      word: word.trim()
-    });
-    this.setState({ params });
-    this.loadTableData(params);
-  }
-  //搜索关键字的 过滤字段
-  handleChangeFilterColumn = (filterColumn) => {
-
-    const params = Object.assign({}, this.state.params, {
-      page: 1,
-      filterColumn: filterColumn
-    });
-
-    if (this.state.params.word) {
-      this.loadTableData(params);
-    }
-
-    this.setState({ params });
-  }
-
-  //改变数据状态 (全部，启用，禁用)
-  handleChangeStatus = (status) => {
-    const params = Object.assign({}, this.state.params, {
-      page: 1,
-      status: status
-    });
-    this.loadTableData(params);
-    this.setState({ params });
-  }
-  _getDefaultKey(keys) {
+  getDefaultKey = (keys) => {
     if (!keys) {
       return;
     }
@@ -177,6 +113,78 @@ class TableView extends Component {
     }, cb);
   }
 
+  handleWindowResize = () => {
+    this.setState({
+      tableHeight: this.calculateTableHeight()
+    });
+  }
+
+  // 点击分页
+  handleChangePage = (dataKey) => {
+    const params = Object.assign({}, this.state.params, {
+      page: dataKey
+    });
+    this.loadTableData(params);
+    this.setState({ params });
+  }
+  // 切换每页显示数目
+  handleChangeLength = (dataKey) => {
+    const params = Object.assign({}, this.state.params, {
+      page: 1,
+      pagesize: dataKey
+    });
+    this.loadTableData(params);
+    this.setState({ params });
+  }
+  // 关键字搜索
+  handleSearch = (word) => {
+    const params = Object.assign({}, this.state.params, {
+      page: 1,
+      word: word.trim()
+    });
+    this.setState({ params });
+    this.loadTableData(params);
+  }
+  // 搜索关键字的 过滤字段
+  handleChangeFilterColumn = (filterColumn) => {
+
+    const params = Object.assign({}, this.state.params, {
+      page: 1,
+      filterColumn
+    });
+
+    if (this.state.params.word) {
+      this.loadTableData(params);
+    }
+
+    this.setState({ params });
+  }
+
+  // 改变数据状态 (全部，启用，禁用)
+  handleChangeStatus = (status) => {
+    const params = Object.assign({}, this.state.params, {
+      page: 1,
+      status
+    });
+    this.loadTableData(params);
+    this.setState({ params });
+  }
+  handleSortColumn(orderColumn, orderType) {
+    const nextParams = {
+      ...this.state.params,
+      orderColumn,
+      orderType,
+      page: 1
+    };
+    this.loadTableData(nextParams);
+    this.setState({ params: nextParams });
+  }
+
+  calculateTableHeight() {
+    const { tableDefaultHeight } = this.props;
+    const height = getHeight(global) - FRAME_HEIGHT;
+    return height < tableDefaultHeight ? tableDefaultHeight : height;
+  }
   loadTableData = (params) => {
     const clearParams = _(params).omitBy(_.isUndefined).value();
     this.props.onLoadData(clearParams);
@@ -357,7 +365,7 @@ class TableView extends Component {
       if (column.primary) {
         return (
           <Column
-            key='primary'
+            key="primary"
             width={60}
             align="center"
             fixed
@@ -427,17 +435,6 @@ class TableView extends Component {
         {!hidePagination && this.renderPagination()}
       </div>
     );
-  }
-
-  handleSortColumn(orderColumn, orderType) {
-    const nextParams = {
-      ...this.state.params,
-      orderColumn,
-      orderType,
-      page: 1
-    };
-    this.loadTableData(nextParams);
-    this.setState({ params: nextParams });
   }
 }
 

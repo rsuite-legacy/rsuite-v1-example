@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { on, getHeight } from 'dom-lib';
 import debounce from '../utils/debounce';
 
-const FRAME_HEIGHT = 136;  //上下 50 + 上下 18 padding
+const FRAME_HEIGHT = 136;  // 上下 50 + 上下 18 padding
 
 function TableViewHoc(WrapComponent) {
   return class extends Component {
@@ -19,12 +19,12 @@ function TableViewHoc(WrapComponent) {
       });
     }
     componentDidMount() {
-      this._onWindowResizeListener = on(window, 'resize', debounce(this.handleWindowResize, 50));
+      this.onWindowResizeListener = on(window, 'resize', debounce(this.handleWindowResize, 50));
     }
 
     componentWillUnmount() {
-      if (this._onWindowResizeListener) {
-        this._onWindowResizeListener.off();
+      if (this.onWindowResizeListener) {
+        this.onWindowResizeListener.off();
       }
     }
 
@@ -40,7 +40,7 @@ function TableViewHoc(WrapComponent) {
       });
     }
 
-    //点击分页
+    // 点击分页
     handleChangePage = (dataKey) => {
       const params = Object.assign({}, this.state.params, {
         page: dataKey
@@ -48,7 +48,7 @@ function TableViewHoc(WrapComponent) {
       this.props.loadTableData(params);
       this.setState({ params });
     }
-    //切换每页显示数目
+    // 切换每页显示数目
     handleChangeLength = (dataKey) => {
       const params = Object.assign({}, this.state.params, {
         page: 1,

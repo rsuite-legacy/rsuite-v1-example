@@ -35,12 +35,12 @@ export function fetchEvents() {
       type: 'jsonp',
       jsonpCallback: 'callback',
     })
-      .then((response) => response.json())
+      .then(response => response.json())
       .then((json) => {
         dispatch(fetchEventsSuccess(json));
       })
-      .catch(function (error) {
-        dispatch(fetchEventsFailure());
+      .catch((error) => {
+        dispatch(fetchEventsFailure(error));
       });
   };
 }

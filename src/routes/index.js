@@ -5,7 +5,7 @@ module.exports = {
     // http://stackoverflow.com/questions/36194806/invariant-violation-the-root-route-must-render-a-single-element-error-in-react
     component: require('../containers/Index').default,
 
-    //https://github.com/reactjs/react-router/blob/master/docs/guides/IndexRoutes.md
+    // https://github.com/reactjs/react-router/blob/master/docs/guides/IndexRoutes.md
     indexRoute: { onEnter: (nextState, replace) => replace('/events') },
     childRoutes: [
       require('./events'),

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import PropTypes from 'prop-types';
 import Frame from '../../components/Frame';
 import EventList from './EventList';
 
 const MODULE_NAME = 'label';
-class LabelGroups extends Component{
+const propTypes = {
+  headerProps: PropTypes.object
+};
 
+class EventListView extends Component {
   render() {
-
     const children = this.props.children || (
       <EventList />
     );
@@ -22,4 +24,6 @@ class LabelGroups extends Component{
   }
 }
 
-export default LabelGroups;
+EventListView.propTypes = propTypes;
+
+export default EventListView;

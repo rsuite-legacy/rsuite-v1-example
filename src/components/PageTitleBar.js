@@ -2,15 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  title: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.node
+  title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node
   ])
 };
 class PageTitleBar extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const { title, children } = this.props;
@@ -21,7 +18,7 @@ class PageTitleBar extends Component {
       </div>
     );
   }
-};
+}
 
 PageTitleBar.propTypes = propTypes;
 

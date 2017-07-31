@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Table, Column, Cell, HeaderCell } from 'rsuite-table';
-import { FormattedMessage } from 'react-intl';
 
 import { TableResizeHoc } from '../../hoc';
 import PageTitleBar from '../../components/PageTitleBar';
-import { ObjectCell, LinkCell } from '../CustomTableCells';
+import { LinkCell } from '../CustomTableCells';
 
 import getTableLocale from '../getTableLocale';
 
 const propTypes = {
-  data: React.PropTypes.array,
-  status: React.PropTypes.string,
-  onFetchRepos: React.PropTypes.func,
-  //table默认高度
-  tableDefaultHeight: React.PropTypes.number.isRequired,
-  //框架的高度用于计算 table的高度
-  frameHeight: React.PropTypes.number.isRequired,
+  data: PropTypes.array,
+  status: PropTypes.string,
+  onFetchRepos: PropTypes.func,
+  tableHeight: PropTypes.number.isRequired,
+  // table默认高度
+  tableDefaultHeight: PropTypes.number.isRequired,
+  // 框架的高度用于计算 table的高度
+  frameHeight: PropTypes.number.isRequired,
 };
 
 const defaultProps = {
@@ -26,9 +26,6 @@ const defaultProps = {
 // TODO:
 // mixins: [TableResizeMixin],
 class RepoTable extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     const { onFetchRepos } = this.props;
@@ -52,7 +49,7 @@ class RepoTable extends Component {
 
     return (
       <div className="page-content">
-        <PageTitleBar title="Repositories"></PageTitleBar>
+        <PageTitleBar title="Repositories" />
         <Table
           height={this.props.tableHeight}
           data={data}
@@ -115,7 +112,7 @@ class RepoTable extends Component {
       </div>
     );
   }
-};
+}
 
 RepoTable.propTypes = propTypes;
 RepoTable.defaultProps = defaultProps;

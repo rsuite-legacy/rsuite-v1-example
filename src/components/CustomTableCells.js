@@ -1,8 +1,9 @@
 import React from 'react';
 import moment from 'moment';
-import { CONF_DATE, CONF_DATETIME } from '../constants/Conf';
+import _ from 'lodash';
 import { Cell } from 'rsuite-table';
-import { FormattedNumber } from 'react-intl';
+import { FormattedNumber, FormattedMessage } from 'react-intl';
+import { CONF_DATETIME } from '../constants/Conf';
 
 export function getDataByStructure(dataKey, rowData) {
 
@@ -17,17 +18,17 @@ export function getDataByStructure(dataKey, rowData) {
   return data;
 }
 
-//状态列
+// 状态列
 export const StatusCell = ({ rowData, dataKey, ...props }) => {
   let clesses = 'icon icon-lg ' + (rowData[dataKey] === 'ENABLE' ? 'icon-ok-circle green' : 'icon-info2 gray');
   return (
     <Cell {...props}>
-      <i className={clesses}></i>
+      <i className={clesses} />
     </Cell>
   );
 };
 
-//序号
+// 序号
 export const OrderCell = ({ rowData, dataKey, ...props }) => {
   return (
     <Cell {...props} >
@@ -64,14 +65,6 @@ export const LinkCell = ({ rowData, dataKey, ...props }) => {
   );
 };
 
-export const SystemRoleCell = ({ rowData, dataKey, ...props }) => {
-  const role = roles[rowData.systemRole.name];
-  return (
-    <Cell {...props}>
-      <FormattedMessage id={role} />
-    </Cell>
-  );
-};
 
 export const DateTimeCell = ({ rowData, dataKey, ...props }) => {
   let data = getDataByStructure(dataKey, rowData);

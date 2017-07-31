@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { FormControl } from 'rsuite';
 
+const propTypes = {
+  word: PropTypes.string,
+  onChange: PropTypes.func
+};
+
 class SearchInput extends Component {
   constructor(props) {
     super(props);
@@ -9,7 +14,7 @@ class SearchInput extends Component {
       word: this.props.word
     };
   }
-  handleSearch = (word) =>{
+  handleSearch = (word) => {
     this.setState({
       word
     });
@@ -28,4 +33,5 @@ class SearchInput extends Component {
   }
 }
 
+SearchInput.propTypes = propTypes;
 export default SearchInput;

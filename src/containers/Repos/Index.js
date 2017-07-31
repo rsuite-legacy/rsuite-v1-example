@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import Frame from '../../components/Frame';
 import RepoList from './RepoList';
 
-class LabelGroups extends Component {
-  constructor(props) {
-    super(props);
-  }
+class ReposView extends Component {
 
   render() {
     return (
@@ -17,6 +13,4 @@ class LabelGroups extends Component {
   }
 }
 
-export default LabelGroups;
-
-
+export default ReposView;

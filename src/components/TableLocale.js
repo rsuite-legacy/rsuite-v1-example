@@ -6,8 +6,6 @@ export function getLocale(status, data) {
   let emptyMessage;
   let iconClassName;
 
-
-
   if (status === 'DEFAULT') {
     /**
      * 暂时不处理，后续有设计的话，再设置
@@ -29,7 +27,7 @@ export function getLocale(status, data) {
   return {
     emptyMessage: (
       <div>
-        {iconClassName ? <i className={iconClassName}></i> : null}
+        {iconClassName ? <i className={iconClassName} /> : null}
         {emptyMessage ? <FormattedMessage id={emptyMessage} /> : null}
       </div>
     )

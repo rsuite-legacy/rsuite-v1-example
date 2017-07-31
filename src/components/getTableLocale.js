@@ -13,7 +13,7 @@ export default (status, data) => {
   const tableLocale = {
     emptyMessage: (
       <div>
-        <i className={iconClassName}></i> {' '}
+        <i className={iconClassName} /> {' '}
         <FormattedMessage id={emptyMessage} />
       </div>
     )

@@ -6,8 +6,8 @@ import { FormattedMessage } from 'react-intl';
 import { toggleClass } from 'dom-lib';
 
 const propTypes = {
-  open: React.PropTypes.bool,
-  menuItems: React.PropTypes.array,
+  open: PropTypes.bool,
+  menuItems: PropTypes.array,
 };
 
 const defaultProps = {
@@ -20,9 +20,6 @@ const contextTypes = {
 };
 
 class SidebarMenu extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleMenuHeaderClick = (key) => {
     toggleClass(ReactDOM.findDOMNode(this.refs[key]), 'open');
@@ -40,9 +37,9 @@ class SidebarMenu extends Component {
           ref={item.localeKey + index}
         >
           <a >
-            <i className={item.icon}></i>
+            <i className={item.icon} />
             <span className="title"><FormattedMessage id={item.localeKey} /></span>
-            <span className="arrow"></span>
+            <span className="arrow" />
           </a>
           {this.renderSubItems(item.children)}
         </li>

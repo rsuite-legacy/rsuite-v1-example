@@ -19,6 +19,7 @@
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.11.1",
     "moment": "^2.18.1",
+    "prop-types": "^15.5.10",
     "react": "^0.14.9",
     "react-dom": "^0.14.9",
     "react-intl": "^2.1.3",

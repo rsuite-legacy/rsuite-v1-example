@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
-import classNames from 'classnames';
 import { on, getHeight, addClass, removeClass } from 'dom-lib';
 
 import PageHeader from '../components/PageHeader';
@@ -10,13 +9,13 @@ import PageFooter from '../components/PageFooter';
 import debounce from '../utils/debounce';
 
 const propTypes = {
-  activeItem: React.PropTypes.string,
-  hideSidebar: React.PropTypes.bool,
-  hideHeader: React.PropTypes.bool,
+  activeItem: PropTypes.string,
+  hideSidebar: PropTypes.bool,
+  hideHeader: PropTypes.bool,
 };
 
 const contextTypes = {
-  router: React.PropTypes.object.isRequired
+  router: PropTypes.object.isRequired
 };
 
 const defaultProps = {
@@ -24,15 +23,26 @@ const defaultProps = {
 };
 
 class Frame extends Component {
-  constructor(props) {
-    super(props);
+
+  componentDidMount() {
+    this.onWindowResizeListener = on(window, 'resize', debounce(this.handleWindowResize, 50));
+    this.fixedFooter();
   }
 
-  fixedFooter() {
+  componentWillUpdate() {
+    this.fixedFooter();
+  }
 
-    let footer = findDOMNode(this.refs.footer);
-    //context 高度 < window 高度 - header 高度
-    if (getHeight(findDOMNode(this.refs.content)) < getHeight(global) - 50) {
+  componentWillUnmount() {
+    if (this.onWindowResizeListener) {
+      this.onWindowResizeListener.off();
+    }
+  }
+
+  fixedFooter = () => {
+    let footer = findDOMNode(this.footer);
+    // context 高度 < window 高度 - header 高度
+    if (getHeight(findDOMNode(this.content)) < getHeight(global) - 50) {
       addClass(footer, 'fixed');
       return;
     }
@@ -40,21 +50,6 @@ class Frame extends Component {
   }
 
   handleWindowResize = () => {
-    this.fixedFooter();
-  }
-
-  componentDidMount() {
-    this._onWindowResizeListener = on(window, 'resize', debounce(this.handleWindowResize, 50));
-    this.fixedFooter();
-  }
-
-  componentWillUnmount() {
-    if (this._onWindowResizeListener) {
-      this._onWindowResizeListener.off();
-    }
-  }
-
-  componentWillUpdate() {
     this.fixedFooter();
   }
 
@@ -78,18 +73,27 @@ class Frame extends Component {
     return (
       <div>
         {this.renderHeder()}
-        <div className='page-container page-content' ref='content'>
+        <div
+          className="page-container page-content"
+          ref={(ref) => {
+            this.content = ref;
+          }}
+        >
           {this.renderSidebar()}
-          <div className='page-content-wrapper' style={styles}>
+          <div className="page-content-wrapper" style={styles}>
             {children}
-            <PageFooter ref='footer' />
+            <PageFooter
+              ref={(ref) => {
+                this.footer = ref;
+              }}
+            />
           </div>
         </div>
       </div>
 
     );
   }
-};
+}
 
 Frame.propTypes = propTypes;
 Frame.contextTypes = contextTypes;

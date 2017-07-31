@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Form, Field, createFormControl } from 'form-lib';
 import { SchemaModel, StringType } from 'rsuite-schema';
@@ -21,11 +22,11 @@ const LoginModel = SchemaModel({
 });
 
 const propTypes = {
-  onLogin: React.PropTypes.func,
-  errors: React.PropTypes.obejct,
-  status: React.PropTypes.string,
-  message: React.PropTypes.string,
-  onFetchMenu: React.PropTypes.func
+  onLogin: PropTypes.func,
+  errors: PropTypes.obejct,
+  status: PropTypes.string,
+  message: PropTypes.string,
+  onFetchMenu: PropTypes.func
 };
 
 const contextTypes = {
@@ -40,6 +41,20 @@ class Login extends Component {
       errors: {},
       captcha: API_CAPTCHA_JPG
     };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.getForm().reset();
+      this.setState({
+        formData: {
+          username: this.formData.username,
+          captcha: '',
+          password: ''
+        }
+      });
+      this.updateCaptcha();
+    }
   }
 
   handleSubmit = () => {
@@ -59,20 +74,6 @@ class Login extends Component {
     });
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.errors) {
-      this.getForm().reset();
-      this.setState({
-        formData: {
-          username: this.formData.username,
-          captcha: '',
-          password: ''
-        }
-      });
-      this.updateCaptcha();
-    }
-  }
-
   handleFormChange = (values) => {
     this.setState({
       formData: values
@@ -84,36 +85,40 @@ class Login extends Component {
     return (
       <div className="login">
         <Form
-          ref={ref => this.form = ref}
+          ref={(ref) => {
+            this.form = ref;
+          }}
           onChange={this.handleFormChange}
-          onCheck={errors => this.setState({ errors })}
+          onCheck={(errors) => {
+            this.setState({ errors });
+          }}
           defaultValues={this.state.formData}
           model={LoginModel}
           checkTrigger="blur"
-          >
+        >
 
-          <FormGroup className={errors['username'] ? 'has-error' : ''}>
+          <FormGroup className={errors.username ? 'has-error' : ''}>
             <InputGroup inside size="lg">
               <InputGroup.Addon>
                 <IconFont icon="user" />
               </InputGroup.Addon>
               <Field name="username" placeholder="邮箱" />
             </InputGroup>
-            <HelpBlock className={errors['username'] ? 'error' : ''}>{errors['username']}</HelpBlock>
+            <HelpBlock className={errors.username ? 'error' : ''}>{errors['username']}</HelpBlock>
           </FormGroup>
 
-          <FormGroup className={errors['password'] ? 'has-error' : ''}>
+          <FormGroup className={errors.password ? 'has-error' : ''}>
             <InputGroup inside size="lg">
               <InputGroup.Addon>
                 <IconFont icon="lock" />
               </InputGroup.Addon>
               <Field name="password" type="password" placeholder="密码" />
             </InputGroup>
-            <HelpBlock className={errors['password'] ? 'error' : ''}>{errors['password']}</HelpBlock>
+            <HelpBlock className={errors.password ? 'error' : ''}>{errors.password}</HelpBlock>
           </FormGroup>
 
 
-          <FormGroup className={errors['captcha'] ? 'has-error' : ''}>
+          <FormGroup className={errors.captcha ? 'has-error' : ''}>
             <InputGroup inside size="lg">
               <InputGroup.Addon>
                 <IconFont icon="shield" />
@@ -123,7 +128,7 @@ class Login extends Component {
                 <img onClick={this.updateCaptcha} height={40} className="captcha" src={this.state.captcha} />
               </InputGroup.Addon>
             </InputGroup>
-            <HelpBlock className={errors['captcha'] ? 'error' : ''}>{errors['captcha']}</HelpBlock>
+            <HelpBlock className={errors.captcha ? 'error' : ''}>{errors.captcha}</HelpBlock>
           </FormGroup>
 
           <Button shape="primary" block size="lg" onClick={this.handleSubmit}>登录</Button>

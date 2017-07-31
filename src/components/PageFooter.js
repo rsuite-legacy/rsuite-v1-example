@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+const propTypes = {
+  className: PropTypes.string
+};
+
 class PageFooter extends Component {
   render() {
     const classes = classNames('footer', this.props.className);
@@ -11,6 +15,8 @@ class PageFooter extends Component {
       </div>
     );
   }
-};
+}
+
+PageFooter.propTypes = propTypes;
 
 export default PageFooter;

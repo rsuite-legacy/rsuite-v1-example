@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { on, getHeight } from 'dom-lib';
 import debounce from '../utils/debounce';
 
@@ -25,19 +25,19 @@ function TableResizeHoc(Component) {
     }
 
     componentDidMount() {
-      this._onWindowResizeListener = on(window, 'resize', debounce(this.handleWindowResize, 50));
+      this.onWindowResizeListener = on(window, 'resize', debounce(this.handleWindowResize, 50));
     }
 
     componentWillUnmount() {
-      if (this._onWindowResizeListener) {
-        this._onWindowResizeListener.off();
+      if (this.onWindowResizeListener) {
+        this.onWindowResizeListener.off();
       }
     }
 
     render(){
-      return <Component {...this.props} {...this.state}/>
+      return <Component {...this.props} {...this.state} />;
     }
-  }
+  };
 }
 
 export default TableResizeHoc;

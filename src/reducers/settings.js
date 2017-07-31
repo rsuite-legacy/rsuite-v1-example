@@ -23,6 +23,7 @@ const initialState = {
   ]
 };
 
-export default function settings(state = initialState, action) {
+export default function settings(state = initialState) {
   return state;
-};
+}
+

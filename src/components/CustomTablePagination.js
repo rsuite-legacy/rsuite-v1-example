@@ -15,7 +15,7 @@ function formatLengthMenu(lengthMenu) {
   );
 }
 
-function formatInfo(total, activePage) {
+function formatInfo(total) {
   return (
     <span> 共 {' '}
 
@@ -59,7 +59,9 @@ class CustomTablePagination extends Component {
         formatLengthMenu={formatLengthMenu}
         formatInfo={formatInfo}
         activePage={this.props.page}
-        ref={r => this.wrapped = r}
+        ref={(r) => {
+          this.wrapped = r;
+        }}
       />
     );
   }

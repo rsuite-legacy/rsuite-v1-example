@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Header, Navbar, Nav } from 'rsuite';
 import { Link } from 'react-router';
-import { FormattedMessage } from 'react-intl';
 
 const propTypes = {
-  //Logo
-  brand: React.PropTypes.node,
-  //顶部菜单
-  menuItems: React.PropTypes.array,
+  // Logo
+  brand: PropTypes.node,
+  // 顶部菜单
+  menuItems: PropTypes.array,
+  activeItem: PropTypes.string
 };
 
 const contextTypes = {
@@ -16,9 +16,6 @@ const contextTypes = {
 };
 
 class PageHeader extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   renderActiveItem(activeKey) {
     const { activeItem } = this.props;
@@ -47,7 +44,7 @@ class PageHeader extends Component {
       </Header>
     );
   }
-};
+}
 
 PageHeader.propTypes = propTypes;
 PageHeader.contextTypes = contextTypes;

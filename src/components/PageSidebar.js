@@ -4,7 +4,7 @@ import SidebarMenu from './SidebarMenu';
 import SidebarToggler from './SidebarToggler';
 
 const contextTypes = {
-  menuItems: React.PropTypes.array
+  menuItems: PropTypes.array
 };
 
 class PageSidebar extends Component {
@@ -20,7 +20,7 @@ class PageSidebar extends Component {
       </div>
     );
   }
-};
+}
 
 PageSidebar.contextTypes = contextTypes;
 export default PageSidebar;

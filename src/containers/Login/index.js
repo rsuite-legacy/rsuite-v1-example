@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import Frame from '../../components/Frame';
 import Login from './Login';
 
-class LabelGroups extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+class LoginView extends Component {
   render() {
     return (
       <Frame
@@ -18,4 +14,4 @@ class LabelGroups extends Component {
   }
 }
 
-export default LabelGroups;
+export default LoginView;

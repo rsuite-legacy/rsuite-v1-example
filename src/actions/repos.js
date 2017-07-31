@@ -35,12 +35,12 @@ export function fetchRepos() {
       type: 'jsonp',
       jsonpCallback: 'callback',
     })
-      .then((response) => response.json())
+      .then(response => response.json())
       .then((json) => {
         dispatch(fetchReposSuccess(json));
       })
-      .catch(function (error) {
-        dispatch(fetchReposFailure());
+      .catch((error) => {
+        dispatch(fetchReposFailure(error));
       });
   };
 }

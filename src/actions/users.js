@@ -33,15 +33,15 @@ export function fetchUsers() {
   return (dispatch) => {
     dispatch(fetchUsersRequest());
     return fetch(API_USERS)
-      .then((response) => response.json())
+      .then(response => response.json())
       .then((response) => {
         dispatch(fetchUsersSuccess({
           items: response.result.items,
           page: response.page
         }));
       })
-      .catch(function (error) {
-        dispatch(fetchUsersFailure());
+      .catch((error) => {
+        dispatch(fetchUsersFailure(error));
       });
   };
 }

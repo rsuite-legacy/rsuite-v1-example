@@ -4,14 +4,11 @@ import { Button, ButtonGroup } from 'rsuite';
 import { FormattedMessage } from 'react-intl';
 
 const propTypes = {
-  status: React.PropTypes.oneOf(['', 'ENABLE', 'DISABLE']),
-  onClick: React.PropTypes.func
+  status: PropTypes.oneOf(['', 'ENABLE', 'DISABLE']),
+  onClick: PropTypes.func
 };
 
 class ButtonGroupStatusRadio extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleSelect(activeButton) {
     const { onClick } = this.props;
@@ -37,7 +34,7 @@ class ButtonGroupStatusRadio extends Component {
       return (
         <Button
           shape="default"
-          key={index}
+          key={item.dataKey}
           dataKey={item.dataKey}
           className={classes}
         >
@@ -46,7 +43,7 @@ class ButtonGroupStatusRadio extends Component {
       );
     });
     return (
-      <ButtonGroup type='radio' onSelect={this.handleSelect}>
+      <ButtonGroup type="radio" onSelect={this.handleSelect}>
         {buttons}
       </ButtonGroup>
     );
