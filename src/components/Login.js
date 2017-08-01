@@ -104,7 +104,7 @@ class Login extends Component {
               </InputGroup.Addon>
               <Field name="username" placeholder="邮箱" />
             </InputGroup>
-            <HelpBlock className={errors.username ? 'error' : ''}>{errors['username']}</HelpBlock>
+            <HelpBlock className={errors.username ? 'error' : ''}>{errors.username}</HelpBlock>
           </FormGroup>
 
           <FormGroup className={errors.password ? 'has-error' : ''}>

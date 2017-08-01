@@ -14,3 +14,4 @@ export const CustomField = ({ name, label, accepter, error, ...props }) => (
   </FormGroup>
 );
 
+export default CustomField;

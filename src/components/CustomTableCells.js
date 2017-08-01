@@ -74,3 +74,40 @@ export const DateTimeCell = ({ rowData, dataKey, ...props }) => {
     </Cell>
   );
 };
+
+export const ActionsCell = ({ rowData, actions = [], ...props }) => {
+  return (
+    <Cell {...props}>
+      {actions.map((action, i) => {
+        const component = action.component || action.getComponent && action.getComponent(rowData);
+        if (component) {
+          return component;
+        }
+        const disabled = action.disabledWhen && action.disabledWhen(rowData);
+        let href = action.href || action.getHref && action.getHref(rowData);
+        if (!href || disabled) {
+          href = 'javascript:void(0)';
+        }
+        return (
+          <a
+            className={disabled && 'disabled'}
+            onClick={
+              !disabled && action.onClick && action.onClick.bind(null, rowData)
+            }
+            href={href}
+            key={i}
+          >
+            {action.label || action.getLabel(rowData)}
+          </a>
+        );
+
+      }).reduce((prev, cur, idx) => { // join ' | ' between actions
+        if (idx) {
+          prev = prev.concat(' | ');
+        }
+        let ret = prev.concat(cur);
+        return ret;
+      }, [])}
+    </Cell>
+  );
+};

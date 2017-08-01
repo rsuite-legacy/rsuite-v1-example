@@ -9,12 +9,11 @@ import PageTitleBar from '../../components/PageTitleBar';
 import TableView from '../TableView';
 import {
   ObjectCell,
-  LinkCell,
   StatusCell,
   DateTimeCell,
-  SystemRoleCell,
-  ActionCell
+  ActionsCell
 } from '../CustomTableCells';
+import UserModal from './UserModal';
 import chain from '../../utils/createChainedFunction';
 
 const propTypes = {
@@ -59,6 +58,10 @@ class UserTable extends Component {
           { label: '邮箱', value: 'email' }
         ]
       },
+      addButton: {
+        onClick: this.handleAddButtonClick,
+        text: '新建'
+      },
       status: 'ENABLE',
       orderColumn: 'createTime',
       orderType: 'desc',
@@ -87,6 +90,12 @@ class UserTable extends Component {
     ];
     return plugins;
 
+  }
+  getActions() {
+    return [{
+      label: '编辑',
+      onClick: this.handleEdit
+    }];
   }
 
   getTableViewColumns = () => {
@@ -148,25 +157,54 @@ class UserTable extends Component {
           sortable: true,
           resizable: true
         },
-        label: <FormattedMessage id="createDatetime" />,
+        label: <FormattedMessage id="createTime" />,
         cell: <DateTimeCell dataKey="createTime" />
       },
     ];
-    // const operationCell = {
-    //   col: {
-    //     width: 100,
-    //     resizable: true
-    //   },
-    //   label: <FormattedMessage id="operation" />,
-    //   cell: <ActionCell onEdit={this.handleShowEditModal} />
-    // };
+    const operationCell = {
+      col: {
+        width: 300,
+        resizable: true
+      },
+      label: <FormattedMessage id="operation" />,
+      cell: <ActionsCell actions={this.getActions()} />
+    };
 
-    // cols.push(operationCell);
+    cols.push(operationCell);
     return cols;
   }
 
   handleChangeSystemRole = (key) => {
     alert(`SELECT ${key}`);
+  }
+
+  handleViewDetail = (rowData) => {
+    console.log(rowData);
+  }
+
+  handleAddButtonClick = () => {
+    this.setState({
+      show: 'FORM_MODAL',
+      user: ''
+    });
+  }
+
+  handleEdit = (rowData) => {
+    this.setState({
+      show: 'FORM_MODAL',
+      user: rowData
+    });
+  }
+
+  handleFormSubmit = (formData) => {
+    // do form submit logic
+    console.log(formData);
+  }
+
+  handleHideModal = () => {
+    this.setState({
+      show: ''
+    });
   }
 
   loadTableData = (params) => {
@@ -176,7 +214,7 @@ class UserTable extends Component {
 
   render() {
     const { data } = this.props;
-
+    const { show, user } = this.state;
     return (
       <div className="page-content">
         <PageTitleBar title="userList" />
@@ -190,6 +228,13 @@ class UserTable extends Component {
           ref={(ref) => {
             this.table = ref;
           }}
+        />
+
+        <UserModal
+          show={show === 'FORM_MODAL'}
+          user={user}
+          onSubmit={this.handleFormSubmit}
+          onHideModal={this.handleHideModal}
         />
       </div>
     );
