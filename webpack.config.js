@@ -1,5 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const CompressionPlugin = require("compression-webpack-plugin");
+
 const commonPlugins = require('./webpack/plugins');
 const commonRules = require('./webpack/rules');
 
@@ -19,7 +21,14 @@ module.exports = {
         drop_console: false // eslint-disable-line
       }
     }),
-    new webpack.BannerPlugin({ banner: `Last update: ${new Date().toString()}` })
+    new webpack.BannerPlugin({ banner: `Last update: ${new Date().toString()}` }),
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.(js|html)$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
   ],
   module: {
     rules: [

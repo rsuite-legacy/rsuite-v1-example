@@ -5,7 +5,7 @@
   "scripts": {
     "kill": "kill -9 `ps -ef|grep webpack|awk '{print $2}'`",
     "dev": "NODE_ENV=development NODE_TYPE=integration webpack-dev-server --progress --colors --port 3002 --host 0.0.0.0 --config webpack.dev.config.js --devtool source-map ",
-    "build": "rm -rf build && NODE_ENV=production webpack --progress --colors",
+    "build": "rm -rf build && NODE_ENV=production webpack --progress --colors && cp -R ./data ./build",
     "publish-docs": "node ./gh-pages.js",
     "test": "karma start"
   },
@@ -46,23 +46,24 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.5.0",
     "child-process-promise": "^2.0.2",
+    "compression-webpack-plugin": "^1.0.1",
+    "css-loader": "^0.23.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-plugin-babel": "^3.2.0",
-    "eslint-plugin-jsx-a11y": "^5.0.1",
     "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
     "eslint-plugin-react": "^7.0.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.9.0",
+    "gh-pages": "^0.12.0",
     "html-webpack-plugin": "^2.22.0",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
-    "css-loader": "^0.23.1",
     "postcss-loader": "^0.9.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0",
-    "gh-pages": "^0.12.0"
+    "webpack-dev-server": "^2.3.0"
   }
 }
