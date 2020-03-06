@@ -1,3 +1,3 @@
-# example
+# rsuite-v1-example
 
-https://rsuite.github.io/rsuite-example-admin/
+https://rsuite.github.io/rsuite-v1-example/
